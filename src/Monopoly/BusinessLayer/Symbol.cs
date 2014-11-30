@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLayer
 {
-    class Symbol
+    public class Symbol
     {
         private string symbolName;
         public string name
