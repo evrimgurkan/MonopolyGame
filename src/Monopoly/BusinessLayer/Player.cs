@@ -28,6 +28,13 @@ namespace BusinessLayer
             set { cashAmount = value; }
         }
 
+        private bool isInJail;
+        public bool inJail
+        {
+            get { return isInJail; }
+            set { isInJail = value; }
+        }
+
         #endregion
 
         #region Constructor

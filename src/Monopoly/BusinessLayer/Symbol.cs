@@ -16,9 +16,9 @@ namespace BusinessLayer
 
         //TODO: symbol image should be added.
 
-        public Symbol()
+        public Symbol(string _name)
         {
-            symbolName = "";
+            symbolName = _name;
         }
     }
 }
