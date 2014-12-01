@@ -119,6 +119,8 @@ namespace BusinessLayer
         {
             rentPrice = _rentPrice;
             sellingPrice = _sellingPrice;
+            mortgaged = _mortgaged;
+            owner = _owner;
         }
     }
 
@@ -153,6 +155,8 @@ namespace BusinessLayer
         {
             rentPrice = _rentPrice;
             sellingPrice = _sellingPrice;
+            mortgaged = _mortgaged;
+            owner = _owner;
         }
     }
 }
