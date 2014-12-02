@@ -7,12 +7,21 @@ namespace BusinessLayer
 {
     class PurchasableSpace : Space
     {
-        public abstract int getRentPrice();
+        private Cell _pCell;
+        public Cell pCell
+        {
+            get { return _pCell; }
+            set { _pCell = value; }
+        }
 
-        public abstract int getSellingPrice();
+        public PurchasableSpace(Cell _cell)
+        {
+            _pCell = _cell;
+        }
 
-        public abstract bool isMortgaged();
-
-        public abstract Player ownedBy();
+        public override void playAction()
+        {
+            // Do something
+        }
     }
 }

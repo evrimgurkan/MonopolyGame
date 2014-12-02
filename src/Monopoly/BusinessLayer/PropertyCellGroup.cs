@@ -31,30 +31,17 @@ namespace BusinessLayer
                 groupColor = value;
             }
         }
-        private int hotelCost;
-        public int costPerHotel
-        {
-            get { return hotelCost; }
-            set { hotelCost = value; }
-        }
 
-        private int houseCost;
-        public int costPerHouse
-        {
-            get { return houseCost; }
-            set { houseCost = value; }
-        }
 
         public PropertyCellGroup(int _houseCost, int _hotelCost,CellColor _color)
         {
-            houseCost = _houseCost;
-            hotelCost = _hotelCost;
+            this.cells = new List<Cell>();
             groupColor = _color;
         }
 
         public void addCell(PropertyCell _propCell)
         {
-            cells.Add(_propCell);
+            this.cells.Add(_propCell);
         }
 
 

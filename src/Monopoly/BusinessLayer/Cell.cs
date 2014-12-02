@@ -56,17 +56,8 @@ namespace BusinessLayer
             set { _price = value; }
         }
 
-
-
-        public Cell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice)
+        public Cell()
         {
-            _cellGroup = _cellGrp;
-            _mortgageValue = _mortgageVal;
-            _mortgaged = false;
-            _cellName = _name;
-            _cellOwner = null;
-            _hasOwner = false;
-            _price = _cellprice;
         }
     }
 }

@@ -9,11 +9,11 @@ namespace BusinessLayer
     {
         public NonPropertyCellGroup(string _name) // name ?
         {
-
+            this.cells = new List<Cell>();
         }
         public void addCell(Cell _cell)
         {
-            cells.Add(_cell);
+            this.cells.Add(_cell);
         }
     }
 }

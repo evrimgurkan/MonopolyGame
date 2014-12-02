@@ -7,6 +7,18 @@ namespace BusinessLayer
 {
     class Board
     {
+        private List<Space> _listSpaces;
+        private List<Player> _listPlayers;
 
+        public Board(List<Player> _players, List<Space> _spaces)
+        {
+            _listPlayers = _players;
+            _listSpaces = _spaces;
+        }
+
+        private void movePlayer(Player player, int space)
+        {
+
+        }
     }
 }
