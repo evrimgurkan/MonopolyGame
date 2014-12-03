@@ -35,6 +35,8 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -46,13 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="CardSpace.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="CellGroup.cs" />
     <Compile Include="ChanceCard.cs" />
     <Compile Include="CommunityChestCard.cs" />
-    <Compile Include="EventSpace.cs" />
+    <Compile Include="FreeParkingSpace.cs" />
     <Compile Include="GameController.cs" />
-    <Compile Include="IMonopoly.cs" />
+    <Compile Include="GoSpace.cs" />
+    <Compile Include="GoToJailSpace.cs" />
+    <Compile Include="IMonopolyGUI.cs" />
+    <Compile Include="JailSpace.cs" />
     <Compile Include="NonPropertyCellGroup.cs" />
     <Compile Include="PropertyCellGroup.cs" />
     <Compile Include="Space.cs" />

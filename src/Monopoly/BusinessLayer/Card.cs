@@ -13,9 +13,9 @@ namespace BusinessLayer
             TYPE_CCHEST
         }
 
-        public override CardType getType();
-        public override string getLabel();
-        public override void applyAction();
+        public abstract CardType getType();
+        public abstract string getLabel();
+        public abstract void applyAction();
 
     }
 }

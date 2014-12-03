@@ -33,7 +33,7 @@ namespace BusinessLayer
         }
 
 
-        public PropertyCellGroup(int _houseCost, int _hotelCost,CellColor _color)
+        public PropertyCellGroup(CellColor _color)
         {
             this.cells = new List<Cell>();
             groupColor = _color;
@@ -44,6 +44,14 @@ namespace BusinessLayer
             this.cells.Add(_propCell);
         }
 
+        public List<Cell> getOwnedCells()
+        {
+            return this.cells; //TODO
+        }
 
+        public List<Cell> getUnOwnedCells()
+        {
+            return this.cells;//TODO
+        }
     }
 }

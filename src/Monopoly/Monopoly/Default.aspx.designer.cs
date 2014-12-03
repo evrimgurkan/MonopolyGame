@@ -11,7 +11,6 @@
 namespace Monopoly
 {
 
-
     public partial class _Default
     {
 

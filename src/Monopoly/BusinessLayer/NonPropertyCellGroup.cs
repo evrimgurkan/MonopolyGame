@@ -7,7 +7,7 @@ namespace BusinessLayer
 {
     class NonPropertyCellGroup : CellGroup
     {
-        public NonPropertyCellGroup(string _name) // name ?
+        public NonPropertyCellGroup() // name ?
         {
             this.cells = new List<Cell>();
         }
@@ -15,5 +15,6 @@ namespace BusinessLayer
         {
             this.cells.Add(_cell);
         }
+
     }
 }

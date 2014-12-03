@@ -14,7 +14,7 @@ namespace BusinessLayer
             set { rentAmount = value; }
         }
 
-        public RailroadCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice, int _hotelCost, int _houseCost, int _rentPrice)
+        public RailroadCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice, int _rentPrice)
         {
             rentAmount = _rentPrice;
             this.cellGroup = _cellGrp;
