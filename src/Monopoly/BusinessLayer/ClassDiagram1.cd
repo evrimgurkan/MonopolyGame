@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BusinessLayer.Bank" Collapsed="true">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACEAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Board" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Card" Collapsed="true">
+    <Position X="5.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.CardSpace" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Cell" Collapsed="true">
+    <Position X="12" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAIAEAAGAAAgEAAAAAABAAAAAAmAAAAgAQAAAAQAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.CellGroup" Collapsed="true">
+    <Position X="12.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.ChanceCard" Collapsed="true">
+    <Position X="4.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChanceCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.CommunityChestCard" Collapsed="true">
+    <Position X="6.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommunityChestCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Dice" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAIAAAAAAAAADAAAAAAAAAAIAAAAEAAAACAA=</HashCode>
+      <FileName>Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.FreeParkingSpace" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>FreeParkingSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.GameController" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAAEEAAAEIAAAAACAAAAAAAAAAAAIAIAAIAAABAAA=</HashCode>
+      <FileName>GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.GoSpace" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GoSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.GoToJailSpace" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GoToJailSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.JailSpace" Collapsed="true">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>JailSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.NonPropertyCellGroup" Collapsed="true">
+    <Position X="10" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NonPropertyCellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Player" Collapsed="true">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAIAAAAAAAEAAAAAAEAAAAAAAAkAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.PropertyCell" Collapsed="true">
+    <Position X="12" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIACAAAAAAAAAAAABAAAAAAYAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertyCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.PropertyCellGroup" Collapsed="true">
+    <Position X="14.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAgAIAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertyCellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.PurchasableSpace" Collapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchasableSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.RailroadCell" Collapsed="true">
+    <Position X="9.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RailroadCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Space" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Symbol" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Symbol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.UtilityCell" Collapsed="true">
+    <Position X="14" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UtilityCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BusinessLayer.IMonopolyGUI" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMonopolyGUI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

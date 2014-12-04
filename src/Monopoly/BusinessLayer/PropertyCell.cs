@@ -8,17 +8,38 @@ namespace BusinessLayer
     class PropertyCell : Cell
     {
         private int hotelCost;
-        public int costPerHotel
+        public int hotelPrice
         {
             get { return hotelCost; }
             set { hotelCost = value; }
         }
 
-        private int houseCost;
-        public int costPerHouse
+        private int onehouseCost;
+        public int onehousePrice
         {
-            get { return houseCost; }
-            set { houseCost = value; }
+            get { return onehouseCost; }
+            set { onehouseCost = value; }
+        }
+
+        private int twohouseCost;
+        public int twohousePrice
+        {
+            get { return twohouseCost; }
+            set { twohouseCost = value; }
+        }
+
+        private int threehouseCost;
+        public int threehousePrice
+        {
+            get { return threehouseCost; }
+            set { threehouseCost = value; }
+        }
+
+        private int fourhouseCost;
+        public int fourhousePrice
+        {
+            get { return fourhouseCost; }
+            set { fourhouseCost = value; }
         }
 
         private int rentAmount;
@@ -28,10 +49,14 @@ namespace BusinessLayer
             set { rentAmount = value; }
         }
 
-        public PropertyCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice,int _hotelCost, int _houseCost, int _rentPrice)
+        public PropertyCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice,
+            int _hotelCost, int _onehouseCost, int _twohouseCost, int _threehouseCost, int _fourhouseCost, int _rentPrice)
         {
             hotelCost = _hotelCost;
-            houseCost = _houseCost;
+            onehouseCost = _onehouseCost;
+            twohouseCost = _twohouseCost;
+            threehouseCost = _threehouseCost;
+            fourhouseCost = _fourhouseCost;
             rentAmount = _rentPrice;
             this.cellGroup = _cellGrp;
             this.mortgageValue = _mortgageVal;

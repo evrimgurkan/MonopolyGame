@@ -7,9 +7,15 @@ namespace BusinessLayer
 {
     class JailSpace : Space
     {
-        public JailSpace()
+        private string spaceName;
+        public string name
         {
+            get { return spaceName; }
+        }
 
+        public JailSpace(string _name)
+        {
+            spaceName = _name;
         }
 
         public override void playAction()

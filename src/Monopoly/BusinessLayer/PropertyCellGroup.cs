@@ -15,8 +15,8 @@ namespace BusinessLayer
             Green,
             Orange,
             Brown,
-            Cyan,
-            Purple
+            Pink,
+            Purple            
         }
 
         private CellColor groupColor;
@@ -32,11 +32,26 @@ namespace BusinessLayer
             }
         }
 
+        private int hotelCost;
+        public int costPerHotel
+        {
+            get { return hotelCost; }
+            set { hotelCost = value; }
+        }
 
-        public PropertyCellGroup(CellColor _color)
+        private int houseCost;
+        public int costPerHouse
+        {
+            get { return houseCost; }
+            set { houseCost = value; }
+        }
+
+        public PropertyCellGroup(CellColor _color, int _hotelCost, int _houseCost)
         {
             this.cells = new List<Cell>();
             groupColor = _color;
+            houseCost = _houseCost;
+            hotelCost = _hotelCost;
         }
 
         public void addCell(PropertyCell _propCell)

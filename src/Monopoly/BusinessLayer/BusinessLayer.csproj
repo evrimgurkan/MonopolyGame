@@ -58,10 +58,14 @@
     <Compile Include="GoSpace.cs" />
     <Compile Include="GoToJailSpace.cs" />
     <Compile Include="IMonopolyGUI.cs" />
+    <Compile Include="IncomeTax.cs" />
     <Compile Include="JailSpace.cs" />
+    <Compile Include="LuxuryTax.cs" />
     <Compile Include="NonPropertyCellGroup.cs" />
     <Compile Include="PropertyCellGroup.cs" />
     <Compile Include="Space.cs" />
+    <Compile Include="Tax.cs" />
+    <Compile Include="TaxSpace.cs" />
     <Compile Include="UtilityCell.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="Board.cs" />
@@ -72,6 +76,9 @@
     <Compile Include="PropertyCell.cs" />
     <Compile Include="RailroadCell.cs" />
     <Compile Include="Symbol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

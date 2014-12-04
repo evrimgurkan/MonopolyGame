@@ -7,9 +7,15 @@ namespace BusinessLayer
 {
     class FreeParkingSpace : Space
     {
-        public FreeParkingSpace()
+        private string spaceName;
+        public string name
         {
+            get { return spaceName; }
+        }
 
+        public FreeParkingSpace(string _name)
+        {
+            spaceName = _name; 
         }
 
         public override void playAction()
