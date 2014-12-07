@@ -5,9 +5,272 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Monopoly Game</title>
+    
+  <script src="/js/utils.js"></script>
+  <script src="/js/rotate-box.js"></script>
+  <style media="screen">
+	figure {
+	  margin: 0;
+	}
+    .container {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      float:left;
+      margin: auto 40px;
+      border: 1px solid #CCC;
+      -webkit-perspective: 1000px;
+         -moz-perspective: 1000px;
+           -o-perspective: 1000px;
+              perspective: 1000px;
+    }
+
+    #cube {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #cube figure {
+      display: block;
+      position: absolute;
+      width: 196px;
+      height: 196px;
+      border: 2px solid black;
+      line-height: 196px;
+      font-size: 120px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    #cube.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #cube .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
+    #cube .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
+    #cube .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
+    #cube .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
+    #cube .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
+    #cube .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+    #cube .front  {
+      -webkit-transform: translateZ( 100px );
+         -moz-transform: translateZ( 100px );
+           -o-transform: translateZ( 100px );
+              transform: translateZ( 100px );
+    }
+    #cube .back   {
+      -webkit-transform: rotateX( -180deg ) translateZ( 100px );
+         -moz-transform: rotateX( -180deg ) translateZ( 100px );
+           -o-transform: rotateX( -180deg ) translateZ( 100px );
+              transform: rotateX( -180deg ) translateZ( 100px );
+    }
+    #cube .right {
+      -webkit-transform: rotateY(   90deg ) translateZ( 100px );
+         -moz-transform: rotateY(   90deg ) translateZ( 100px );
+           -o-transform: rotateY(   90deg ) translateZ( 100px );
+              transform: rotateY(   90deg ) translateZ( 100px );
+    }
+    #cube .left {
+      -webkit-transform: rotateY(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateY(  -90deg ) translateZ( 100px );
+           -o-transform: rotateY(  -90deg ) translateZ( 100px );
+              transform: rotateY(  -90deg ) translateZ( 100px );
+    }
+    #cube .top {
+      -webkit-transform: rotateX(   90deg ) translateZ( 100px );
+         -moz-transform: rotateX(   90deg ) translateZ( 100px );
+           -o-transform: rotateX(   90deg ) translateZ( 100px );
+              transform: rotateX(   90deg ) translateZ( 100px );
+    }
+    #cube .bottom {
+      -webkit-transform: rotateX(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateX(  -90deg ) translateZ( 100px );
+           -o-transform: rotateX(  -90deg ) translateZ( 100px );
+              transform: rotateX(  -90deg ) translateZ( 100px );
+    }
+
+    #cube.show-front {
+      -webkit-transform: translateZ( -100px );
+         -moz-transform: translateZ( -100px );
+           -o-transform: translateZ( -100px );
+              transform: translateZ( -100px );
+    }
+    #cube.show-back {
+      -webkit-transform: translateZ( -100px ) rotateX( -180deg );
+         -moz-transform: translateZ( -100px ) rotateX( -180deg );
+           -o-transform: translateZ( -100px ) rotateX( -180deg );
+              transform: translateZ( -100px ) rotateX( -180deg );
+    }
+    #cube.show-right {
+      -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateY(  -90deg );
+           -o-transform: translateZ( -100px ) rotateY(  -90deg );
+              transform: translateZ( -100px ) rotateY(  -90deg );
+    }
+    #cube.show-left {
+      -webkit-transform: translateZ( -100px ) rotateY(   90deg );
+         -moz-transform: translateZ( -100px ) rotateY(   90deg );
+           -o-transform: translateZ( -100px ) rotateY(   90deg );
+              transform: translateZ( -100px ) rotateY(   90deg );
+    }
+    #cube.show-top {
+      -webkit-transform: translateZ( -100px ) rotateX(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateX(  -90deg );
+           -o-transform: translateZ( -100px ) rotateX(  -90deg );
+              transform: translateZ( -100px ) rotateX(  -90deg );
+    }
+    #cube.show-bottom {
+      -webkit-transform: translateZ( -100px ) rotateX(   90deg );
+         -moz-transform: translateZ( -100px ) rotateX(   90deg );
+           -o-transform: translateZ( -100px ) rotateX(   90deg );
+              transform: translateZ( -100px ) rotateX(   90deg );
+    }
+
+	
+	<!-- CUBE 2-->
+	.container2 {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto 40px;
+      border: 1px solid #CCC;
+      -webkit-perspective: 1000px;
+         -moz-perspective: 1000px;
+           -o-perspective: 1000px;
+              perspective: 1000px;
+    }
+	
+	#cube2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #cube2 figure {
+      display: block;
+      position: absolute;
+      width: 196px;
+      height: 196px;
+      border: 2px solid black;
+      line-height: 196px;
+      font-size: 120px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    #cube2.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #cube2 .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
+    #cube2 .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
+    #cube2 .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
+    #cube2 .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
+    #cube2 .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
+    #cube2 .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+    #cube2 .front  {
+      -webkit-transform: translateZ( 100px );
+         -moz-transform: translateZ( 100px );
+           -o-transform: translateZ( 100px );
+              transform: translateZ( 100px );
+    }
+    #cube2 .back   {
+      -webkit-transform: rotateX( -180deg ) translateZ( 100px );
+         -moz-transform: rotateX( -180deg ) translateZ( 100px );
+           -o-transform: rotateX( -180deg ) translateZ( 100px );
+              transform: rotateX( -180deg ) translateZ( 100px );
+    }
+    #cube2 .right {
+      -webkit-transform: rotateY(   90deg ) translateZ( 100px );
+         -moz-transform: rotateY(   90deg ) translateZ( 100px );
+           -o-transform: rotateY(   90deg ) translateZ( 100px );
+              transform: rotateY(   90deg ) translateZ( 100px );
+    }
+    #cube2 .left {
+      -webkit-transform: rotateY(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateY(  -90deg ) translateZ( 100px );
+           -o-transform: rotateY(  -90deg ) translateZ( 100px );
+              transform: rotateY(  -90deg ) translateZ( 100px );
+    }
+    #cube2 .top {
+      -webkit-transform: rotateX(   90deg ) translateZ( 100px );
+         -moz-transform: rotateX(   90deg ) translateZ( 100px );
+           -o-transform: rotateX(   90deg ) translateZ( 100px );
+              transform: rotateX(   90deg ) translateZ( 100px );
+    }
+    #cube2 .bottom {
+      -webkit-transform: rotateX(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateX(  -90deg ) translateZ( 100px );
+           -o-transform: rotateX(  -90deg ) translateZ( 100px );
+              transform: rotateX(  -90deg ) translateZ( 100px );
+    }
+
+    #cube2.show-front {
+      -webkit-transform: translateZ( -100px );
+         -moz-transform: translateZ( -100px );
+           -o-transform: translateZ( -100px );
+              transform: translateZ( -100px );
+    }
+    #cube2.show-back {
+      -webkit-transform: translateZ( -100px ) rotateX( -180deg );
+         -moz-transform: translateZ( -100px ) rotateX( -180deg );
+           -o-transform: translateZ( -100px ) rotateX( -180deg );
+              transform: translateZ( -100px ) rotateX( -180deg );
+    }
+    #cube2.show-right {
+      -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateY(  -90deg );
+           -o-transform: translateZ( -100px ) rotateY(  -90deg );
+              transform: translateZ( -100px ) rotateY(  -90deg );
+    }
+    #cube2.show-left {
+      -webkit-transform: translateZ( -100px ) rotateY(   90deg );
+         -moz-transform: translateZ( -100px ) rotateY(   90deg );
+           -o-transform: translateZ( -100px ) rotateY(   90deg );
+              transform: translateZ( -100px ) rotateY(   90deg );
+    }
+    #cube2.show-top {
+      -webkit-transform: translateZ( -100px ) rotateX(  -90deg );
+         -moz-transform: translateZ( -100px ) rotateX(  -90deg );
+           -o-transform: translateZ( -100px ) rotateX(  -90deg );
+              transform: translateZ( -100px ) rotateX(  -90deg );
+    }
+    #cube2.show-bottom {
+      -webkit-transform: translateZ( -100px ) rotateX(   90deg );
+         -moz-transform: translateZ( -100px ) rotateX(   90deg );
+           -o-transform: translateZ( -100px ) rotateX(   90deg );
+              transform: translateZ( -100px ) rotateX(   90deg );
+    }
+  </style>
 </head>
 <body>
-    <form id="form1" runat="server">
         <div>
             <table cellpadding="2" align="center" cellspacing="0" border="2" style=" width: 1250px;height:900px; font-size:15px;" class="monopolyTable">
                 <caption style="font-size:15px;"><b>Standard (American Edition) Monopoly game board layout</b>
@@ -72,6 +335,39 @@
                         </td>
                         <th colspan="9" rowspan="9" style="text-align: center; vertical-align: middle; font-size:50px;">
                             Monopoly
+  <section class="container">
+    <div id="cube" class="show-front">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+  </section>
+  
+    <section class="container">
+    <div id="cube2" class="show-front">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+      <figure class="right">3</figure>
+      <figure class="left">4</figure>
+      <figure class="top">5</figure>
+      <figure class="bottom">6</figure>
+    </div>
+  </section>
+    <section id="options">
+
+    <p id="show-buttons">
+      <button class="show-front">Show 1</button>
+      <button class="show-back">Show 2</button>
+      <button class="show-right">Show 3</button>
+      <button class="show-left">Show 4</button>
+      <button class="show-top">Show 5</button>
+      <button class="show-bottom">Show 6</button>
+    </p>
+
+  </section>
                         </th>
                         <td bgcolor="#338033" style="width:20px;">
                         </td>
@@ -232,6 +528,5 @@
                 </tbody>
             </table>
         </div>
-    </form>
 </body>
 </html>

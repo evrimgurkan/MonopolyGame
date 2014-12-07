@@ -53,8 +53,11 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\cube.css" />
     <Content Include="Default.aspx" />
     <Content Include="items.aspx" />
+    <Content Include="js\rotate-box.js" />
+    <Content Include="js\utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
