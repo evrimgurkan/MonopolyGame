@@ -18,7 +18,7 @@ namespace BusinessLayer
             taxAmount = _taxAmount;
         }
 
-        public override TaxType getType()
+        public override TaxType getTaxType()
         {
             return _type;
         }

@@ -11,7 +11,7 @@
 namespace Monopoly {
     
     
-    public partial class _Default {
+    public partial class items {
         
         /// <summary>
         /// form1 control.

@@ -10,7 +10,11 @@ namespace BusinessLayer
         private List<Space> _listSpaces;
         private List<Player> _listPlayers;
 
-        public Board(List<Player> _players, List<Space> _spaces)
+        public Board()
+        {
+        }
+
+        public void fillBoard(List<Player> _players, List<Space> _spaces)
         {
             _listPlayers = _players;
             _listSpaces = _spaces;

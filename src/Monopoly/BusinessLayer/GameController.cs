@@ -349,8 +349,10 @@ namespace BusinessLayer
         private string goToJailName = "GOTO JAIL";
         private string freeParkingName = "FREE PARKING SPACE";
         private string goName = "GO";
+
         #endregion
 
+        #region Properties
         private Bank bank;
         private List<Player> listPlayer;
         private List<Space> listSpace;
@@ -359,20 +361,24 @@ namespace BusinessLayer
         private List<Symbol> listSymbol;
         private List<Card> listChanceCard;
         private List<Card> listCChest;
+        #endregion
 
         public GameController()
         {
             bank = new Bank();
             listPlayer = new List<Player>();
             listSpace = new List<Space>();
-            //board = new Board();
+            board = new Board();
             dice = new Dice();
             listSymbol = new List<Symbol>();
-            listCard = new List<Card>();
+            listChanceCard = new List<Card>();
+            listCChest = new List<Card>();
         }
 
-        public void init()
+        public void initBoard()
         {
+            #region ADD BOARD ITEMS
+
             #region ADD CARDS TO LIST
             addCChestCards();
             addChanceCards();
@@ -435,8 +441,8 @@ namespace BusinessLayer
             #endregion
 
             #region ADD RAILROAD1 SPACE
-            RailroadCell railroadCell1 = new RailroadCell(npRailRoadCellGroup, rail_mortgageval,
-                                                          railroad1_name, rail_cellprice, rail_rentprice);
+            RailroadCell railroadCell1 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
+                                                          railroad1_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell1);
             listSpace.Add(new PurchasableSpace(railroadCell1));
             #endregion
@@ -489,7 +495,7 @@ namespace BusinessLayer
             UtilityCell utility1_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
                                                         utilities1_name,utilities_cost, utilities_rentMultiplierWithDice);
             npUtilitiesCellGroup.addCell(utility1_cell);
-            listSpace.Add(new PurchasableSpace(util_npcell));
+            listSpace.Add(new PurchasableSpace(utility1_cell));
             #endregion
 
             #region ADD PINK2 SPACE
@@ -511,8 +517,8 @@ namespace BusinessLayer
             #endregion
 
             #region ADD RAILROAD2 SPACE
-            RailroadCell railroadCell2 = new RailroadCell(npRailRoadCellGroup, rail_mortgageval,
-                                                          railroad2_name, rail_cellprice, rail_rentprice);
+            RailroadCell railroadCell2 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
+                                                          railroad2_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell2);
             listSpace.Add(new PurchasableSpace(railroadCell2));
             #endregion
@@ -584,8 +590,8 @@ namespace BusinessLayer
             #endregion
 
             #region ADD RAILROAD3 SPACE
-            RailroadCell railroadCell3 = new RailroadCell(npRailRoadCellGroup, rail_mortgageval,
-                                                          railroad3_name, rail_cellprice, rail_rentprice);
+            RailroadCell railroadCell3 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
+                                                          railroad3_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell3);
             listSpace.Add(new PurchasableSpace(railroadCell3));
             #endregion
@@ -612,7 +618,7 @@ namespace BusinessLayer
             UtilityCell utility2_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
                                                         utilities2_name, utilities_cost, utilities_rentMultiplierWithDice);
             npUtilitiesCellGroup.addCell(utility2_cell);
-            listSpace.Add(new PurchasableSpace(util_npcell));
+            listSpace.Add(new PurchasableSpace(utility2_cell));
             #endregion
 
             #region ADD YELLOW3 SPACE
@@ -660,8 +666,8 @@ namespace BusinessLayer
             #endregion
 
             #region ADD RAILROAD4 SPACE
-            RailroadCell railroadCell4 = new RailroadCell(npRailRoadCellGroup, rail_mortgageval,
-                                                          railroad4_name, rail_cellprice, rail_rentprice);
+            RailroadCell railroadCell4 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
+                                                          railroad4_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell4);
             listSpace.Add(new PurchasableSpace(railroadCell4));
             #endregion
@@ -695,6 +701,10 @@ namespace BusinessLayer
             #region ADD GO SPACE
             listSpace.Add(new GoSpace(goName));
             #endregion
+
+            #endregion
+
+            board.fillBoard(listPlayer, listSpace);
 
         }
 
@@ -788,9 +798,11 @@ namespace BusinessLayer
             Console.WriteLine("GameController");
             Console.ReadLine();
         }
+
         public void showMessage()
         {
         }
+
         public void startGame()
         {
         }
