@@ -7,18 +7,26 @@ namespace BusinessLayer
 {
     public class Symbol
     {
-        private string symbolName;
-        public string name
+        public enum SymbolType
         {
-            get { return symbolName; }
-            set { symbolName = value; }
+            HORSE,
+            TOWER,
+            CAR,
+            BOOK,
+            TREE
+        }
+        private SymbolType symboltype;
+        public SymbolType symbol
+        {
+            get { return symboltype; }
+            set { symboltype = value; }
         }
 
         //TODO: symbol image should be added.
 
-        public Symbol(string _name)
+        public Symbol(SymbolType type)
         {
-            symbolName = _name;
+            symboltype = type;
         }
     }
 }

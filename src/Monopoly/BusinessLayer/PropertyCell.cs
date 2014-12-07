@@ -50,9 +50,9 @@ namespace BusinessLayer
         }
 
         public PropertyCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice,
-            int _hotelCost, int _onehouseCost, int _twohouseCost, int _threehouseCost, int _fourhouseCost, int _rentPrice)
+            int _hotelPrice, int _onehouseCost, int _twohouseCost, int _threehouseCost, int _fourhouseCost, int _rentPrice)
         {
-            hotelCost = _hotelCost;
+            hotelCost = _hotelPrice;
             onehouseCost = _onehouseCost;
             twohouseCost = _twohouseCost;
             threehouseCost = _threehouseCost;
