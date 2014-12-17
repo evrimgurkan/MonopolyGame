@@ -355,7 +355,7 @@ namespace BusinessLayer
         #region Properties
         private Bank bank;
         private List<Player> listPlayer;
-        private List<Space> listSpace;
+        private IteratorOperations.SpaceList listSpace;
         private Board board;
         private Dice dice;
         private List<Symbol> listSymbol;
@@ -367,7 +367,7 @@ namespace BusinessLayer
         {
             bank = new Bank();
             listPlayer = new List<Player>();
-            listSpace = new List<Space>();
+            listSpace = new IteratorOperations.SpaceList();
             board = new Board();
             dice = new Dice();
             listSymbol = new List<Symbol>();

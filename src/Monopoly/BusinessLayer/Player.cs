@@ -35,6 +35,7 @@ namespace BusinessLayer
             set { isInJail = value; }
         }
 
+        private IteratorOperations.Iterator playerIterator;
         #endregion
 
         #region Constructor
@@ -54,8 +55,17 @@ namespace BusinessLayer
         #endregion
 
         #region Methods
+        public void CreateIterator(IteratorOperations.SpaceList sList)
+        {
+            playerIterator =  new IteratorOperations.SpaceIterator(sList);
+        }
 
+        public IteratorOperations.Iterator GetIterator()
+        {
+            return playerIterator;
+        }
         #endregion
+
 
     }
 }

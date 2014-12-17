@@ -32,6 +32,8 @@ namespace BusinessLayer
         //public event EventHandler<MoveEventArgs> playerLanded;
         public abstract void playAction();
 
+       // public abstract IteratorOperations.Iterator CreateIterator();
+
         ////The event-invoking method that derived classes can override. 
         //protected virtual void OnPlayerLanded(MoveEventArgs e)
         //{

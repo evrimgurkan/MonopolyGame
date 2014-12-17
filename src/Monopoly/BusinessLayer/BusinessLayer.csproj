@@ -59,6 +59,9 @@
     <Compile Include="GoToJailSpace.cs" />
     <Compile Include="IMonopolyGUI.cs" />
     <Compile Include="IncomeTax.cs" />
+    <Compile Include="IteratorOperations\Iterator.cs" />
+    <Compile Include="IteratorOperations\SpaceIterator.cs" />
+    <Compile Include="IteratorOperations\SpaceList.cs" />
     <Compile Include="JailSpace.cs" />
     <Compile Include="LuxuryTax.cs" />
     <Compile Include="NonPropertyCellGroup.cs" />
