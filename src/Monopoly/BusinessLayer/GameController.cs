@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BusinessLayer
+namespace Model
 {
-    class GameController
+    public class GameController
     {
 
         #region Constants
@@ -363,7 +363,23 @@ namespace BusinessLayer
         private List<Card> listCChest;
         #endregion
 
-        public GameController()
+        private static GameController instance;
+        private GameController()
+        { }
+
+        public static GameController GameControllerInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new GameController();
+                }
+                return instance;
+            }
+        }
+
+        public void initilaise()
         {
             bank = new Bank();
             listPlayer = new List<Player>();
@@ -704,8 +720,19 @@ namespace BusinessLayer
 
             #endregion
 
-            board.fillBoard(listPlayer, listSpace);
+        }
 
+        public void fillBoard()
+        {
+            board.fillBoard(listPlayer, listSpace);
+        }
+
+        public void addPlayer(string name)
+        {
+            Symbol symbol = new Symbol(Symbol.SymbolType.CAR);
+            listSymbol.Add(symbol);
+            Player player = new Player(name, 0, listSymbol[0]);
+            listPlayer.Add(player);
         }
 
         private void addCChestCards()

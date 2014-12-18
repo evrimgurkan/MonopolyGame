@@ -53,20 +53,29 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreatePlayer.aspx" />
     <Content Include="css\cube.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Monopoly.aspx" />
     <Content Include="items.aspx" />
     <Content Include="js\rotate-box.js" />
     <Content Include="js\utils.js" />
+    <Content Include="NewGame.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="CreatePlayer.aspx.cs">
+      <DependentUpon>CreatePlayer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CreatePlayer.aspx.designer.cs">
+      <DependentUpon>CreatePlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monopoly.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Monopoly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monopoly.aspx.designer.cs">
+      <DependentUpon>Monopoly.aspx</DependentUpon>
     </Compile>
     <Compile Include="items.aspx.cs">
       <DependentUpon>items.aspx</DependentUpon>
@@ -76,6 +85,13 @@
       <DependentUpon>items.aspx</DependentUpon>
     </Compile>
     <Compile Include="MonopolyGUIController.cs" />
+    <Compile Include="NewGame.aspx.cs">
+      <DependentUpon>NewGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewGame.aspx.designer.cs">
+      <DependentUpon>NewGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

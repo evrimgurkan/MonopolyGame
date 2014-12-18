@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BusinessLayer.IteratorOperations
+namespace Model.IteratorOperations
 {
     public class SpaceList
     {
