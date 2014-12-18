@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLayer.IteratorOperations
 {
-    abstract class Iterator
+    public abstract class Iterator
     {
         public abstract Space First();
         public abstract Space Next();

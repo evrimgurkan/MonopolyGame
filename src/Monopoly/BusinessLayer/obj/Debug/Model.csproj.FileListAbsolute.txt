@@ -1,0 +1,5 @@
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\bin\Debug\BusinessLayer.pdb

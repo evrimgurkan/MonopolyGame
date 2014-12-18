@@ -82,9 +82,13 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+    <ProjectReference Include="..\BusinessLayer\Model.csproj">
       <Project>{AC388CFF-BCB0-468B-AE8D-C5430DE38C04}</Project>
-      <Name>BusinessLayer</Name>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonopolyController\MonopolyController.csproj">
+      <Project>{EDE38601-E19E-4D54-ADC2-8B82F9F33FAF}</Project>
+      <Name>MonopolyController</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

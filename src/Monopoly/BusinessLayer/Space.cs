@@ -27,7 +27,7 @@ namespace BusinessLayer
     //    }
     //}
 
-    abstract class Space
+    public abstract class Space
     {
         //public event EventHandler<MoveEventArgs> playerLanded;
         public abstract void playAction();

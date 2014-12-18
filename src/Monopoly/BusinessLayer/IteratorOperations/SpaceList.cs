@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLayer.IteratorOperations
 {
-    class SpaceList
+    public class SpaceList
     {
         private List<Space> listSpace ;
 
