@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class JailSpace : Space
+    class JailSpace : NonPurchasableSpace
     {
         private string spaceName;
         public string name

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class TaxSpace : Space
+    class TaxSpace : NonPurchasableSpace
     {
         private Tax _tax;
 

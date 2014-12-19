@@ -126,11 +126,11 @@
       <FileName>PropertyCellGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Model.PurchasableSpace" Collapsed="true">
+  <Class Name="Model.PropertySpace" Collapsed="true">
     <Position X="12" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIBAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PurchasableSpace.cs</FileName>
+      <FileName>PropertySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.RailroadCell" Collapsed="true">

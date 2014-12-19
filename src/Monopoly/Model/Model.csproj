@@ -8,8 +8,8 @@
     <ProjectGuid>{AC388CFF-BCB0-468B-AE8D-C5430DE38C04}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BusinessLayer</RootNamespace>
-    <AssemblyName>BusinessLayer</AssemblyName>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -65,14 +65,16 @@
     <Compile Include="JailSpace.cs" />
     <Compile Include="LuxuryTax.cs" />
     <Compile Include="NonPropertyCellGroup.cs" />
+    <Compile Include="NonPurchasableSpace.cs" />
     <Compile Include="PropertyCellGroup.cs" />
+    <Compile Include="PurchasableSpace.cs" />
     <Compile Include="Space.cs" />
     <Compile Include="Tax.cs" />
     <Compile Include="TaxSpace.cs" />
     <Compile Include="UtilityCell.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="Board.cs" />
-    <Compile Include="PurchasableSpace.cs" />
+    <Compile Include="PropertySpace.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

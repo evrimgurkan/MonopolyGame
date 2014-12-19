@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class FreeParkingSpace : Space
+    class FreeParkingSpace : NonPurchasableSpace
     {
         private string spaceName;
         public string name

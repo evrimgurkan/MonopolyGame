@@ -436,7 +436,7 @@ namespace Model
                                                         brown1_3housePrice,brown1_4housePrice,brown1_rentPrice);
 
             pBrownCellGroup.addCell(brown1_cell);
-            listSpace.Add(new PurchasableSpace(brown1_cell));
+            listSpace.Add(new PropertySpace(brown1_cell));
             #endregion
 
             #region ADD CCHEST CARD SPACE
@@ -449,7 +449,7 @@ namespace Model
                                                         brown2_3housePrice, brown2_4housePrice, brown2_rentPrice);
 
             pBrownCellGroup.addCell(brown2_cell);
-            listSpace.Add(new PurchasableSpace(brown2_cell));
+            listSpace.Add(new PropertySpace(brown2_cell));
             #endregion
 
             #region ADD INCOME TAX SPACE
@@ -460,7 +460,7 @@ namespace Model
             RailroadCell railroadCell1 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
                                                           railroad1_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell1);
-            listSpace.Add(new PurchasableSpace(railroadCell1));
+            listSpace.Add(new PropertySpace(railroadCell1));
             #endregion
 
             #region ADD BLUE1 SPACE
@@ -469,7 +469,7 @@ namespace Model
                                                         blue1_3housePrice, blue1_4housePrice, blue1_rentPrice);
 
             pBrownCellGroup.addCell(blue1_cell);
-            listSpace.Add(new PurchasableSpace(blue1_cell));
+            listSpace.Add(new PropertySpace(blue1_cell));
             #endregion
 
             #region ADD CHANCE CARD SPACE
@@ -482,7 +482,7 @@ namespace Model
                                                         blue2_3housePrice, blue2_4housePrice, blue2_rentPrice);
 
             pBrownCellGroup.addCell(blue2_cell);
-            listSpace.Add(new PurchasableSpace(blue2_cell));
+            listSpace.Add(new PropertySpace(blue2_cell));
             #endregion
 
             #region ADD BLUE3 SPACE
@@ -491,7 +491,7 @@ namespace Model
                                                         blue3_3housePrice, blue3_4housePrice, blue3_rentPrice);
 
             pBrownCellGroup.addCell(blue3_cell);
-            listSpace.Add(new PurchasableSpace(blue3_cell));
+            listSpace.Add(new PropertySpace(blue3_cell));
             #endregion
 
             #region ADD JAIL SPACE
@@ -504,14 +504,14 @@ namespace Model
                                             pink1_3housePrice, pink1_4housePrice, pink1_rentPrice);
 
             pBrownCellGroup.addCell(pink1_cell);
-            listSpace.Add(new PurchasableSpace(pink1_cell));
+            listSpace.Add(new PropertySpace(pink1_cell));
             #endregion
 
             #region ADD UTILITY1 SPACE
             UtilityCell utility1_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
                                                         utilities1_name,utilities_cost, utilities_rentMultiplierWithDice);
             npUtilitiesCellGroup.addCell(utility1_cell);
-            listSpace.Add(new PurchasableSpace(utility1_cell));
+            listSpace.Add(new PropertySpace(utility1_cell));
             #endregion
 
             #region ADD PINK2 SPACE
@@ -520,7 +520,7 @@ namespace Model
                                             pink2_3housePrice, pink2_4housePrice, pink2_rentPrice);
 
             pBrownCellGroup.addCell(pink2_cell);
-            listSpace.Add(new PurchasableSpace(pink2_cell));
+            listSpace.Add(new PropertySpace(pink2_cell));
             #endregion
 
             #region ADD PINK3 SPACE
@@ -529,14 +529,14 @@ namespace Model
                                             pink3_3housePrice, pink3_4housePrice, pink3_rentPrice);
 
             pBrownCellGroup.addCell(pink3_cell);
-            listSpace.Add(new PurchasableSpace(pink3_cell));
+            listSpace.Add(new PropertySpace(pink3_cell));
             #endregion
 
             #region ADD RAILROAD2 SPACE
             RailroadCell railroadCell2 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
                                                           railroad2_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell2);
-            listSpace.Add(new PurchasableSpace(railroadCell2));
+            listSpace.Add(new PropertySpace(railroadCell2));
             #endregion
 
             #region ADD ORANGE1 SPACE
@@ -545,7 +545,7 @@ namespace Model
                                             orange1_3housePrice, orange1_4housePrice, orange1_rentPrice);
 
             pBrownCellGroup.addCell(orange1_cell);
-            listSpace.Add(new PurchasableSpace(orange1_cell));
+            listSpace.Add(new PropertySpace(orange1_cell));
             #endregion
 
             #region ADD CCHEST CARD SPACE
@@ -558,7 +558,7 @@ namespace Model
                                             orange2_3housePrice, orange2_4housePrice, orange2_rentPrice);
 
             pBrownCellGroup.addCell(orange2_cell);
-            listSpace.Add(new PurchasableSpace(orange2_cell));
+            listSpace.Add(new PropertySpace(orange2_cell));
             #endregion
 
             #region ADD ORANGE3 SPACE
@@ -567,7 +567,7 @@ namespace Model
                                             orange3_3housePrice, orange3_4housePrice, orange3_rentPrice);
 
             pBrownCellGroup.addCell(orange3_cell);
-            listSpace.Add(new PurchasableSpace(orange3_cell));
+            listSpace.Add(new PropertySpace(orange3_cell));
             #endregion
 
             #region ADD FREE PARKING SPACE
@@ -580,7 +580,7 @@ namespace Model
                                             red1_3housePrice, red1_4housePrice, red1_rentPrice);
 
             pBrownCellGroup.addCell(red1_cell);
-            listSpace.Add(new PurchasableSpace(red1_cell));
+            listSpace.Add(new PropertySpace(red1_cell));
             #endregion
 
             #region ADD CHANCE CARD SPACE
@@ -593,7 +593,7 @@ namespace Model
                                             red2_3housePrice, red2_4housePrice, red2_rentPrice);
 
             pBrownCellGroup.addCell(red2_cell);
-            listSpace.Add(new PurchasableSpace(red2_cell));
+            listSpace.Add(new PropertySpace(red2_cell));
             #endregion
 
             #region ADD RED3 SPACE
@@ -602,14 +602,14 @@ namespace Model
                                             red3_3housePrice, red3_4housePrice, red3_rentPrice);
 
             pBrownCellGroup.addCell(red3_cell);
-            listSpace.Add(new PurchasableSpace(red3_cell));
+            listSpace.Add(new PropertySpace(red3_cell));
             #endregion
 
             #region ADD RAILROAD3 SPACE
             RailroadCell railroadCell3 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
                                                           railroad3_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell3);
-            listSpace.Add(new PurchasableSpace(railroadCell3));
+            listSpace.Add(new PropertySpace(railroadCell3));
             #endregion
 
             #region ADD YELLOW1 SPACE
@@ -618,7 +618,7 @@ namespace Model
                                             yellow1_3housePrice, yellow1_4housePrice, yellow1_rentPrice);
 
             pBrownCellGroup.addCell(yellow1_cell);
-            listSpace.Add(new PurchasableSpace(yellow1_cell));
+            listSpace.Add(new PropertySpace(yellow1_cell));
             #endregion
 
             #region ADD YELLOW2 SPACE
@@ -627,14 +627,14 @@ namespace Model
                                             yellow2_3housePrice, yellow2_4housePrice, yellow2_rentPrice);
 
             pBrownCellGroup.addCell(yellow2_cell);
-            listSpace.Add(new PurchasableSpace(yellow2_cell));
+            listSpace.Add(new PropertySpace(yellow2_cell));
             #endregion
 
             #region ADD UTILITY2 SPACE
             UtilityCell utility2_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
                                                         utilities2_name, utilities_cost, utilities_rentMultiplierWithDice);
             npUtilitiesCellGroup.addCell(utility2_cell);
-            listSpace.Add(new PurchasableSpace(utility2_cell));
+            listSpace.Add(new PropertySpace(utility2_cell));
             #endregion
 
             #region ADD YELLOW3 SPACE
@@ -643,7 +643,7 @@ namespace Model
                                             yellow3_3housePrice, yellow3_4housePrice, yellow3_rentPrice);
 
             pBrownCellGroup.addCell(yellow3_cell);
-            listSpace.Add(new PurchasableSpace(yellow3_cell));
+            listSpace.Add(new PropertySpace(yellow3_cell));
             #endregion
 
             #region ADD GO TO JAIL SPACE
@@ -656,7 +656,7 @@ namespace Model
                                             green1_3housePrice, green1_4housePrice, green1_rentPrice);
 
             pBrownCellGroup.addCell(green1_cell);
-            listSpace.Add(new PurchasableSpace(green1_cell));
+            listSpace.Add(new PropertySpace(green1_cell));
             #endregion
 
             #region ADD GREEN2 SPACE
@@ -665,7 +665,7 @@ namespace Model
                                             green2_3housePrice, green2_4housePrice, green2_rentPrice);
 
             pBrownCellGroup.addCell(green2_cell);
-            listSpace.Add(new PurchasableSpace(green2_cell));
+            listSpace.Add(new PropertySpace(green2_cell));
             #endregion
 
             #region ADD CCHEST CARD SPACE
@@ -678,14 +678,14 @@ namespace Model
                                             green3_3housePrice, green3_4housePrice, green3_rentPrice);
 
             pBrownCellGroup.addCell(green3_cell);
-            listSpace.Add(new PurchasableSpace(green3_cell));
+            listSpace.Add(new PropertySpace(green3_cell));
             #endregion
 
             #region ADD RAILROAD4 SPACE
             RailroadCell railroadCell4 = new RailroadCell(npRailRoadCellGroup, railroad_mortgagePrice,
                                                           railroad4_name, railroad_cost, railroad_rentPrice);
             npRailRoadCellGroup.addCell(railroadCell4);
-            listSpace.Add(new PurchasableSpace(railroadCell4));
+            listSpace.Add(new PropertySpace(railroadCell4));
             #endregion
 
             #region ADD CHANCE CARD SPACE
@@ -698,7 +698,7 @@ namespace Model
                                             purple1_3housePrice, purple1_4housePrice, purple1_rentPrice);
 
             pBrownCellGroup.addCell(purple1_cell);
-            listSpace.Add(new PurchasableSpace(purple1_cell));
+            listSpace.Add(new PropertySpace(purple1_cell));
             #endregion
 
             #region ADD LUXURY TAX SPACE
@@ -711,7 +711,7 @@ namespace Model
                                             purple2_3housePrice, purple2_4housePrice, purple2_rentPrice);
 
             pBrownCellGroup.addCell(purple2_cell);
-            listSpace.Add(new PurchasableSpace(purple2_cell));
+            listSpace.Add(new PropertySpace(purple2_cell));
             #endregion
 
             #region ADD GO SPACE

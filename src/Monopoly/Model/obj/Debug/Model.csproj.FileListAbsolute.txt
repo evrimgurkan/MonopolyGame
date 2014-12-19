@@ -8,3 +8,8 @@ C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\Busin
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\BusinessLayer.dll
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\BusinessLayer.pdb
+F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\ResolveAssemblyReference.cache
+F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.dll
+F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.pdb
+F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.dll
+F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.pdb

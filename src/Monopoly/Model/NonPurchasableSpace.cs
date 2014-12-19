@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Model
 {
-    abstract class PurchasableSpace : Space
+    abstract class NonPurchasableSpace : Space
     {
+
     }
 }

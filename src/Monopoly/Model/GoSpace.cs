@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class GoSpace : Space
+    class GoSpace : NonPurchasableSpace
     {
         private string spaceName;
         public string name

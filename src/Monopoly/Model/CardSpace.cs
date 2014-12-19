@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class CardSpace : Space
+    class CardSpace : NonPurchasableSpace
     {
         private Card _card;
 

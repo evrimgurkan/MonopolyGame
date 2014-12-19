@@ -5,17 +5,18 @@ using System.Text;
 
 namespace Model
 {
-    class GoToJailSpace : NonPurchasableSpace
+    class PropertySpace : PurchasableSpace
     {
-        private string spaceName;
-        public string name
+        private Cell _pCell;
+        public Cell pCell
         {
-            get { return spaceName; }
+            get { return _pCell; }
+            set { _pCell = value; }
         }
 
-        public GoToJailSpace(string _name)
+        public PropertySpace(Cell _cell)
         {
-            spaceName = _name;
+            _pCell = _cell;
         }
 
         public override void playAction()
