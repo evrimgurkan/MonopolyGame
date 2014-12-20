@@ -11,8 +11,8 @@ F:\projects\MonopolyGame\src\Monopoly\Monopoly\obj\Debug\ResolveAssemblyReferenc
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\Monopoly.dll
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\Monopoly.pdb
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\Model.dll
-F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\MonopolyController.dll
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\Model.pdb
-F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\MonopolyController.pdb
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\obj\Debug\Monopoly.dll
 F:\projects\MonopolyGame\src\Monopoly\Monopoly\obj\Debug\Monopoly.pdb
+F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\MonopolyController.dll
+F:\projects\MonopolyGame\src\Monopoly\Monopoly\bin\MonopolyController.pdb

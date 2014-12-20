@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model.CommandOperations;
 
 namespace Model
 {
-    public class Player
+    public class Player : CommandReceiver
     {
         #region Properties
 
@@ -65,7 +66,6 @@ namespace Model
             return playerIterator;
         }
         #endregion
-
 
     }
 }

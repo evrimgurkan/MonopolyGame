@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model.CommandOperations;
 
 namespace Model
 {
-    class Board
+    class Board : CommandReceiver
     {
         private IteratorOperations.SpaceList _listSpaces;
         private List<Player> _listPlayers;

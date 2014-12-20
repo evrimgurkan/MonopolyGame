@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MonopolyController;
+//using MonopolyController;
 
 namespace Monopoly
 {
@@ -19,9 +19,9 @@ namespace Monopoly
 
         protected void btnNewGame_Click(object sender, EventArgs e)
         {
-            MonopolyGameController mGameController = new MonopolyGameController();
-            mGameController.initBoard();
-            Response.Redirect(createPlayerPage);
+            //MonopolyGameController mGameController = new MonopolyGameController();
+            //mGameController.initBoard();
+            //Response.Redirect(createPlayerPage);
         }
     }
 }

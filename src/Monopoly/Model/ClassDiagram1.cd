@@ -1,168 +1,231 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Model.Bank" Collapsed="true">
-    <Position X="1.5" Y="3" Width="1.5" />
+    <Position X="8" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACEAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Bank.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Board" Collapsed="true">
-    <Position X="6.25" Y="3" Width="1.5" />
+    <Position X="11" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACwCAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Card" Collapsed="true">
-    <Position X="5.25" Y="7.25" Width="1.5" />
+    <Position X="6.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Card.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.CardSpace" Collapsed="true">
-    <Position X="5.25" Y="5.75" Width="1.5" />
+    <Position X="6.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CardSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Cell" Collapsed="true">
-    <Position X="12" Y="7.25" Width="1.5" />
+    <Position X="20.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAIAEAAGAAAgEAAAAAABAAAAAAmAAAAgAQAAAAQAAA=</HashCode>
       <FileName>Cell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.CellGroup" Collapsed="true">
-    <Position X="12.25" Y="10.75" Width="1.5" />
+    <Position X="20.75" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CellGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.ChanceCard" Collapsed="true">
-    <Position X="4.25" Y="8.75" Width="1.5" />
+    <Position X="5.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAQAABAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>ChanceCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.CommunityChestCard" Collapsed="true">
-    <Position X="6.5" Y="8.75" Width="1.5" />
+    <Position X="7.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAQAABAAAAAAAQAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>CommunityChestCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Dice" Collapsed="true">
-    <Position X="3.75" Y="3" Width="1.5" />
+    <Position X="17.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAQAAIAAAAAAAAADAAAAAAAAAAIAAAAEAAAACAA=</HashCode>
       <FileName>Dice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.FreeParkingSpace" Collapsed="true">
-    <Position X="7.5" Y="5.75" Width="1.5" />
+    <Position X="10.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
       <FileName>FreeParkingSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.GameController" Collapsed="true">
-    <Position X="6.25" Y="1.5" Width="1.5" />
+    <Position X="14.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gQAAAEEAAAEIAAAAACAAAAAAAAAAAAIAIAAIAAABAAA=</HashCode>
+      <HashCode>7cMOXcXD4OP+281cP6FM3FKBxuT9H7OiZrcIK/9f/9c=</HashCode>
       <FileName>GameController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.GoSpace" Collapsed="true">
-    <Position X="0.75" Y="5.75" Width="1.5" />
+    <Position X="16.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
       <FileName>GoSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.GoToJailSpace" Collapsed="true">
-    <Position X="3" Y="5.75" Width="1.5" />
+    <Position X="2.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
       <FileName>GoToJailSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Model.IncomeTax" Collapsed="true">
+    <Position X="13.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAIAAAAAEAAAAAAAAQAACAA=</HashCode>
+      <FileName>IncomeTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Model.JailSpace" Collapsed="true">
-    <Position X="9.75" Y="5.75" Width="1.5" />
+    <Position X="12.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
       <FileName>JailSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Model.LuxuryTax" Collapsed="true">
+    <Position X="15.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAIAAAAAEAAAAAAAAQAACAA=</HashCode>
+      <FileName>LuxuryTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Model.NonPropertyCellGroup" Collapsed="true">
-    <Position X="10" Y="12" Width="1.5" />
+    <Position X="21.75" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NonPropertyCellGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Model.Player" Collapsed="true">
-    <Position X="8.75" Y="3" Width="1.5" />
+  <Class Name="Model.NonPurchasableSpace" Collapsed="true">
+    <Position X="9.25" Y="6.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>IgAIAAAAAAAEAAAAAAEAAAAAAAAkAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NonPurchasableSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Player" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAIAACAAAAEAAACAAEAAAAAAAAkAAAAAAIAAAAAAAI=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.PropertyCell" Collapsed="true">
-    <Position X="12" Y="9.25" Width="1.5" />
+    <Position X="20.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAIACAAAAAAAAAAAABAAAAAAYAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAhAAACAAAQAAAAAAAAAAAAAAAQAAAAAEAEgQgAQAA=</HashCode>
       <FileName>PropertyCell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.PropertyCellGroup" Collapsed="true">
-    <Position X="14.25" Y="12" Width="1.5" />
+    <Position X="19.5" Y="14.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAgAIAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAIAAAAAAAAAAAAAABAAgAIAIAACAAAAAAAAAAAA=</HashCode>
       <FileName>PropertyCellGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.PropertySpace" Collapsed="true">
-    <Position X="12" Y="5.75" Width="1.5" />
+    <Position X="21" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIBAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PropertySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Model.PurchasableSpace" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchasableSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Model.RailroadCell" Collapsed="true">
-    <Position X="9.75" Y="9.25" Width="1.5" />
+    <Position X="18.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RailroadCell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Space" Collapsed="true">
-    <Position X="6.25" Y="4.5" Width="1.5" />
+    <Position X="14.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Space.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Symbol" Collapsed="true">
-    <Position X="11.25" Y="3" Width="1.5" />
+    <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Symbol.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Model.Tax" Collapsed="true">
+    <Position X="14.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAACAA=</HashCode>
+      <FileName>Tax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.TaxSpace" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Model.UtilityCell" Collapsed="true">
-    <Position X="14" Y="9.25" Width="1.5" />
+    <Position X="23" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UtilityCell.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Model.IteratorOperations.Iterator" Collapsed="true">
+    <Position X="22.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQAAAAAAgAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IteratorOperations\Iterator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IteratorOperations.SpaceIterator" Collapsed="true">
+    <Position X="22.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQABAAAAgAAAAABAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>IteratorOperations\SpaceIterator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IteratorOperations.SpaceList" Collapsed="true">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>IteratorOperations\SpaceList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Model.IMonopolyGUI" Collapsed="true">
-    <Position X="6.25" Y="0.5" Width="1.5" />
+    <Position X="14.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IMonopolyGUI.cs</FileName>

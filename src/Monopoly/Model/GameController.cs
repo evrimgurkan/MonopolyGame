@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model.CommandOperations;
 
 namespace Model
 {
@@ -317,7 +318,7 @@ namespace Model
         private const string cchest14_cardLabel = "You have won second prize in a beauty contest– collect $10 ";
         private const string cchest15_cardLabel = "You inherit $100 ";
         private const string cchest16_cardLabel = "From sale of stock you get $50 ";
-        
+
         #endregion
 
         #region Chance Cards
@@ -361,6 +362,7 @@ namespace Model
         private List<Symbol> listSymbol;
         private List<Card> listChanceCard;
         private List<Card> listCChest;
+        private Command command;
         #endregion
 
         private static GameController instance;
@@ -432,8 +434,8 @@ namespace Model
             #region ADD BROWN1 SPACE
 
             PropertyCell brown1_cell = new PropertyCell(pBrownCellGroup, brown1_mortgagePrice, brown1_name, brown1_cost,
-                                                        brown1_hotelPrice,brown1_1housePrice,brown1_2housePrice,
-                                                        brown1_3housePrice,brown1_4housePrice,brown1_rentPrice);
+                                                        brown1_hotelPrice, brown1_1housePrice, brown1_2housePrice,
+                                                        brown1_3housePrice, brown1_4housePrice, brown1_rentPrice);
 
             pBrownCellGroup.addCell(brown1_cell);
             listSpace.Add(new PropertySpace(brown1_cell));
@@ -453,7 +455,7 @@ namespace Model
             #endregion
 
             #region ADD INCOME TAX SPACE
-            listSpace.Add(new TaxSpace(new IncomeTax(incomeLabel,incomeTaxAmount)));
+            listSpace.Add(new TaxSpace(new IncomeTax(incomeLabel, incomeTaxAmount)));
             #endregion
 
             #region ADD RAILROAD1 SPACE
@@ -509,7 +511,7 @@ namespace Model
 
             #region ADD UTILITY1 SPACE
             UtilityCell utility1_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
-                                                        utilities1_name,utilities_cost, utilities_rentMultiplierWithDice);
+                                                        utilities1_name, utilities_cost, utilities_rentMultiplierWithDice);
             npUtilitiesCellGroup.addCell(utility1_cell);
             listSpace.Add(new PropertySpace(utility1_cell));
             #endregion
@@ -833,5 +835,15 @@ namespace Model
         public void startGame()
         {
         }
+
+        public void SetCommand(Command command)
+        {
+            this.command = command;
+        }
+
+        public void ExecuteCommand()
+        {
+            command.Execute();
+        }    
     }
 }

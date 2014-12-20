@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Model
+namespace IMonopoly
 {
     public interface IMonopolyGUI
     {
-        void movePlayer();
-        void showMessage();
-        void startGame();
+        void setInstance(IMonopolyGUI instance);
     }
 }

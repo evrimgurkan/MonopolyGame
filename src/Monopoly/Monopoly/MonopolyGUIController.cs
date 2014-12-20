@@ -8,7 +8,7 @@ using Model;
 
 namespace Monopoly
 {
-    public class MonopolyGUIController : IMonopolyGUI
+    public class MonopolyGUIController
     {
         private _Default pageInstance;
         public MonopolyGUIController()
@@ -27,5 +27,7 @@ namespace Monopoly
         public void startGame()
         {
         }
+
+
     }
 }
