@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using MonopolyController;
+using MonopolyController;
 
 namespace Monopoly
 {
     public partial class CreatePlayer : System.Web.UI.Page
     {
         private static string startGamePage = "Monopoly.aspx";
+        public static MonopolyGameController mGameController = new MonopolyGameController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,13 +21,14 @@ namespace Monopoly
 
         protected void btnStartGame_Click(object sender, EventArgs e)
         {
-            //mGameController.fillBoard();
-            //Response.Redirect(startGamePage);
+            mGameController.fillBoard();
+            Response.Redirect(startGamePage);
         }
 
         protected void btnAddPlayer_Click(object sender, EventArgs e)
         {
-            //mGameController.addPlayer(txtName.Text);
+            mGameController.addPlayer(txtName.Text);
+            txtName.Text = "";
         }        
     }
 }

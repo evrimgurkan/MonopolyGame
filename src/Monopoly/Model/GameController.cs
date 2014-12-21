@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Model.CommandOperations;
 using Model.CommandOperations.Orders;
+using Model.IteratorOperations;
 
 namespace Model
 {
@@ -427,10 +428,10 @@ namespace Model
             #endregion
 
             #region ADD PLAYERS
-            Player player1 = new Player("ahmet", 2000, listSymbol[0]);
-            listPlayer.Add(player1);
-            Player player2 = new Player("veli", 2000, listSymbol[3]);
-            listPlayer.Add(player2);
+            //Player player1 = new Player("ahmet", 2000, listSymbol[0]);
+            //listPlayer.Add(player1);
+            //Player player2 = new Player("veli", 2000, listSymbol[3]);
+            //listPlayer.Add(player2);
             #endregion
 
             #region ADD BROWN1 SPACE
@@ -824,12 +825,28 @@ namespace Model
             return null;
         }
 
-        public void movePlayer()
+        public void movePlayer(int playerIndex, int count)
         {
-            Console.WriteLine("GameController");
-            Console.ReadLine();
+            Iterator it = listPlayer[playerIndex].GetIterator();
 
+            //for (int i = 0; i < count; i++)
+            //{
+            //    it.Next();
+            //}
 
+            Space s = it.CurrentItem(); //it.Next();
+            s.playAction();
+        }
+
+        public int getCurrentIndex(int playerIndex, int count)
+        {
+            Iterator it = listPlayer[playerIndex].GetIterator();
+
+            for (int i = 0; i < count; i++)
+            {
+                it.Next();
+            }
+            return it.CurrentIndex();
         }
 
         public void showMessage()
@@ -858,6 +875,27 @@ namespace Model
         public void ExecuteCommand()
         {
             command.Execute();
-        }    
+        }
+
+        public string getPlayerName(int index)
+        {
+            return listPlayer[index].name;
+        }
+        public int getPlayerCash(int index)
+        {
+            return listPlayer[index].cash;
+        }
+        public bool isPlayerJail(int index)
+        {
+            return listPlayer[index].inJail;
+        }
+        public Symbol getPlayerSymbol(int index)
+        {
+            return listPlayer[index].symbol;
+        }
+        public int getPlayersCount()
+        {
+            return listPlayer.Count();
+        }
     }
 }

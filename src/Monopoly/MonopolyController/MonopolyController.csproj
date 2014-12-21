@@ -57,10 +57,6 @@
       <Project>{AC388CFF-BCB0-468B-AE8D-C5430DE38C04}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Monopoly\Monopoly.csproj">
-      <Project>{2E873B7C-975A-48BC-BF6C-E00D6FE4BB88}</Project>
-      <Name>Monopoly</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

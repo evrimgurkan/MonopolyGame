@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class Dice
+    public class Dice
     {
         #region Props
 
@@ -52,14 +52,12 @@ namespace Model
             return isScoreDouble;
         }
 
-        public int rollDice()
+        public void rollDice()
         {
             // TODO: check two dice values are different or not
             Random diceRandom = new Random();
             diceOneValue = diceRandom.Next(1, 7);
             diceTwoValue = diceRandom.Next(1, 7);
-
-            return diceOneValue + diceTwoValue;
         }
 
         #endregion

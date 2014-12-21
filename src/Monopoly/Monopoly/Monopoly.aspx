@@ -271,6 +271,7 @@
   </style>
 </head>
 <body>
+        <form id="form1" runat="server">
         <div>
             <table cellpadding="2" align="center" cellspacing="0" border="2" style=" width: 1250px;height:900px; font-size:15px;" class="monopolyTable">
                 <caption style="font-size:15px;"><b>Standard (American Edition) Monopoly game board layout</b>
@@ -334,9 +335,9 @@
                         <td bgcolor="#ff8000" style="width:20px;">
                         </td>
                         <th colspan="9" rowspan="9" style="text-align: center; vertical-align: middle; font-size:50px;">
-                            Monopoly
-  <section class="container">
-    <div id="cube" class="show-front">
+                            Monopoly<asp:ListBox ID="lbLogs" runat="server" Height="290px" Width="260px">
+                            </asp:ListBox>
+&nbsp;<section class="container"><div id="cube" class="show-front">
       <figure class="front">1</figure>
       <figure class="back">2</figure>
       <figure class="right">3</figure>
@@ -365,6 +366,12 @@
       <button class="show-left">Show 4</button>
       <button class="show-top">Show 5</button>
       <button class="show-bottom">Show 6</button>
+    </p>
+                            <p>
+                                <asp:Button ID="btnRollDice" runat="server" onclick="btnRollDice_Click" 
+                                    Text="Roll Dice" />
+                                <asp:Button ID="btnFinishTurn" runat="server" onclick="btnFinishTurn_Click" 
+                                    Text="Finish Turn" Visible="False" Width="91px" />
     </p>
 
   </section>
@@ -528,5 +535,6 @@
                 </tbody>
             </table>
         </div>
+        </form>
 </body>
 </html>

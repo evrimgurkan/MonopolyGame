@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Model.CommandOperations;
+using Model.IteratorOperations;
 
 namespace Model
 {
@@ -36,14 +37,14 @@ namespace Model
             set { isInJail = value; }
         }
 
-        private IteratorOperations.Iterator playerIterator;
+        private Iterator playerIterator;
         #endregion
 
         #region Constructor
         public Player(string _name, int _cash, Symbol _symbol)
         {
             playerName = _name;
-            cashAmount = _cash;
+            cashAmount = 1000;
             playerSymbol = _symbol;
         }
 
@@ -56,12 +57,12 @@ namespace Model
         #endregion
 
         #region Methods
-        public void CreateIterator(IteratorOperations.SpaceList sList)
+        public void CreateIterator(SpaceList sList)
         {
-            playerIterator =  new IteratorOperations.SpaceIterator(sList);
+            playerIterator =  new SpaceIterator(sList);
         }
 
-        public IteratorOperations.Iterator GetIterator()
+        public Iterator GetIterator()
         {
             return playerIterator;
         }
