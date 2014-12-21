@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Model;
-using INSMonopolyGuiController;
 
 namespace MonopolyController
 {
-    public class MonopolyGameController:MonopolyGuiController
+    public class MonopolyGameController
     {
         GameController gameController = GameController.GameControllerInstance;
         public void initBoard()
