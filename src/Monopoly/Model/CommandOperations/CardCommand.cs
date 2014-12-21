@@ -7,13 +7,14 @@ namespace Model.CommandOperations
 {
     class CardCommand : Command
     {
-        public CardCommand(CommandReceiver receiver, Order order) : base(receiver,order) 
-        {  
+        public CardCommand(Order cardOrder)
+            : base(cardOrder) 
+        {
         }
 
-        public override void Execute()
+        public override bool Execute()
         {
-            //receiver.Action();
+           return order.ApplyOrder();
         }
     }
 }

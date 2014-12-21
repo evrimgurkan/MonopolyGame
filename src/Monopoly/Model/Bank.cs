@@ -6,7 +6,7 @@ using Model.CommandOperations;
 
 namespace Model
 {
-    class Bank : CommandReceiver
+    public class Bank : CommandReceiver
     {
         private int bankCash;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Model.CommandOperations;
+using Model.CommandOperations.Orders;
 
 namespace Model
 {
@@ -344,6 +345,7 @@ namespace Model
         private int maxCountPlayer = 5;
         private int luxuryTaxAmount = 75;
         private int incomeTaxAmount = 200;
+        private int passing_go_amount = 200;
         private string incomeLabel = "Pay %10 or 200$";
         private string luxuryLabel = "Luxury Tax 75$";
         private string jailName = "JAIL";
@@ -740,74 +742,74 @@ namespace Model
         private void addCChestCards()
         {
             CommunityChestCard card;
-            card = new CommunityChestCard(cchest1_cardLabel);
+            card = new CommunityChestCard(cchest1_cardLabel, Card.OrderType.AdvancetoGo);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest2_cardLabel);
+            card = new CommunityChestCard(cchest2_cardLabel, Card.OrderType.BankErrorInYourFavor);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest3_cardLabel);
+            card = new CommunityChestCard(cchest3_cardLabel, Card.OrderType.DoctorFees);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest4_cardLabel);
+            card = new CommunityChestCard(cchest4_cardLabel, Card.OrderType.GetOutofJail);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest5_cardLabel);
+            card = new CommunityChestCard(cchest5_cardLabel, Card.OrderType.GotoJail);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest6_cardLabel);
+            card = new CommunityChestCard(cchest6_cardLabel, Card.OrderType.Birthday_CollectFromEachPlayer);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest7_cardLabel);
+            card = new CommunityChestCard(cchest7_cardLabel, Card.OrderType.GrandOperaNight);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest8_cardLabel);
+            card = new CommunityChestCard(cchest8_cardLabel, Card.OrderType.IncomeTaxRefund);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest9_cardLabel);
+            card = new CommunityChestCard(cchest9_cardLabel, Card.OrderType.LifeInsuranceMatures);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest10_cardLabel);
+            card = new CommunityChestCard(cchest10_cardLabel, Card.OrderType.PayHospitalFees);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest11_cardLabel);
+            card = new CommunityChestCard(cchest11_cardLabel, Card.OrderType.PaySchoolFees);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest12_cardLabel);
+            card = new CommunityChestCard(cchest12_cardLabel, Card.OrderType.ReceiveConsultancyFee);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest13_cardLabel);
+            card = new CommunityChestCard(cchest13_cardLabel, Card.OrderType.StreetRepairs);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest14_cardLabel);
+            card = new CommunityChestCard(cchest14_cardLabel, Card.OrderType.WonSecondPrize);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest15_cardLabel);
+            card = new CommunityChestCard(cchest15_cardLabel, Card.OrderType.Inherit);
             listCChest.Add(card);
-            card = new CommunityChestCard(cchest16_cardLabel);
+            card = new CommunityChestCard(cchest16_cardLabel, Card.OrderType.FromSaleofStock);
             listCChest.Add(card);
         }
 
         private void addChanceCards()
         {
             ChanceCard card;
-            card = new ChanceCard(chance1_cardLabel);
+            card = new ChanceCard(chance1_cardLabel, Card.OrderType.AdvancetoGo);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance2_cardLabel);
+            card = new ChanceCard(chance2_cardLabel, Card.OrderType.AdvancetoIllinoisAve);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance3_cardLabel);
+            card = new ChanceCard(chance3_cardLabel, Card.OrderType.AdvancetoNearestUtility);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance4_cardLabel);
+            card = new ChanceCard(chance4_cardLabel, Card.OrderType.AdvancetoNearestRailroad);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance5_cardLabel);
+            card = new ChanceCard(chance5_cardLabel, Card.OrderType.AdvancetoCharlesPlace);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance6_cardLabel);
+            card = new ChanceCard(chance6_cardLabel, Card.OrderType.BankPaysYou);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance7_cardLabel);
+            card = new ChanceCard(chance7_cardLabel, Card.OrderType.GetOutofJail);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance8_cardLabel);
+            card = new ChanceCard(chance8_cardLabel, Card.OrderType.GoBack_3_Space);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance9_cardLabel);
+            card = new ChanceCard(chance9_cardLabel, Card.OrderType.GotoJail);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance10_cardLabel);
+            card = new ChanceCard(chance10_cardLabel, Card.OrderType.RepairsAllProperty);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance11_cardLabel);
+            card = new ChanceCard(chance11_cardLabel, Card.OrderType.PayPoorTax);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance12_cardLabel);
+            card = new ChanceCard(chance12_cardLabel, Card.OrderType.AdvancetoReadingRailroad);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance13_cardLabel);
+            card = new ChanceCard(chance13_cardLabel, Card.OrderType.AdvancetoBoardwalk);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance14_cardLabel);
+            card = new ChanceCard(chance14_cardLabel, Card.OrderType.PayEachPlayer);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance15_cardLabel);
+            card = new ChanceCard(chance15_cardLabel, Card.OrderType.Collect_150);
             listChanceCard.Add(card);
-            card = new ChanceCard(chance16_cardLabel);
+            card = new ChanceCard(chance16_cardLabel, Card.OrderType.WonCompetition);
             listChanceCard.Add(card);
         }
 
@@ -826,6 +828,8 @@ namespace Model
         {
             Console.WriteLine("GameController");
             Console.ReadLine();
+
+
         }
 
         public void showMessage()
@@ -834,6 +838,16 @@ namespace Model
 
         public void startGame()
         {
+        }
+
+        public Bank getBank()
+        {
+            return bank;
+        }
+
+        public Player getCurrentPlayer()
+        {
+            return listPlayer[0]; // TODO return correct player
         }
 
         public void SetCommand(Command command)

@@ -7,5 +7,15 @@ namespace Model.CommandOperations
 {
     public abstract class Order
     {
+        protected CommandReceiver affected;
+        protected CommandReceiver affecting;
+
+        protected Order(CommandReceiver _affected, CommandReceiver _affecting)
+        {
+            this.affected = _affected;
+            this.affecting = _affecting;
+        }
+
+        public abstract bool ApplyOrder();
     }
 }

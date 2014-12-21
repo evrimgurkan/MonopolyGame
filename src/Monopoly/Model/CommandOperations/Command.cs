@@ -7,16 +7,14 @@ namespace Model.CommandOperations
 {
     public abstract class Command
     {
-        protected CommandReceiver receiver;
-        protected Order commandOrder;
+        protected Order order;
 
         // Constructor 
-        public Command(CommandReceiver _receiver, Order _order)
+        public Command(Order _order)
         {
-            this.receiver = _receiver;
-            commandOrder = _order;
+            order = _order;
         }
 
-        public abstract void Execute();
+        public abstract bool Execute();
     }
 }

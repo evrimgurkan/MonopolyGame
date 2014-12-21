@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model.CommandOperations;
+using Model.CommandOperations.Orders;
 
 namespace Model
 {
@@ -9,11 +11,12 @@ namespace Model
     {
         private CardType _type;
         private string _label;
-
-        public CommunityChestCard(string label)
+        private OrderType _order_type;
+        public CommunityChestCard(string label, OrderType orderType)
         {
             _type = CardType.TYPE_CCHEST;
             _label = label;
+            _order_type = orderType;
         }
 
         public override CardType getType()
@@ -26,9 +29,63 @@ namespace Model
             return _label;
         }
 
+        public override OrderType getOrderType()
+        {
+            return _order_type;
+        }
+
+        protected override Order getOrder(OrderType type)
+        {
+            GameController controller = GameController.GameControllerInstance;
+            switch (type)
+            {
+                case OrderType.AdvancetoGo:
+                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
+                    break;
+                case OrderType.BankErrorInYourFavor:
+                    break;
+                case OrderType.DoctorFees:
+                    break;
+                case OrderType.GetOutofJail:
+                    break;
+                case OrderType.GotoJail:
+                    break;
+                case OrderType.Birthday_CollectFromEachPlayer:
+                    break;
+                case OrderType.GrandOperaNight:
+                    break;
+                case OrderType.IncomeTaxRefund:
+                    break;
+                case OrderType.LifeInsuranceMatures:
+                    break;
+                case OrderType.PayHospitalFees:
+                    break;
+                case OrderType.PaySchoolFees:
+                    break;
+                case OrderType.ReceiveConsultancyFee:
+                    break;
+                case OrderType.StreetRepairs:
+                    break;
+                case OrderType.WonSecondPrize:
+                    break;
+                case OrderType.Inherit:
+                    break;
+                case OrderType.FromSaleofStock:
+                    break;
+                default:
+                    break;
+            }
+            return null;
+        }
+
         public override void applyAction()
         {
-            // Do something
+            GameController controller = GameController.GameControllerInstance;
+            Order _order = getOrder(_order_type);
+            Command _command = new CardCommand(_order);
+            controller.SetCommand(_command);
+            controller.ExecuteCommand();
         }
     }
 }
