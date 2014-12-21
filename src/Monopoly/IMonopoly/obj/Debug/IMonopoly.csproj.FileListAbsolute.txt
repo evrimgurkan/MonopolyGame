@@ -1,5 +1,0 @@
-F:\projects\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\ResolveAssemblyReference.cache
-F:\projects\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.dll
-F:\projects\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.pdb
-F:\projects\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.dll
-F:\projects\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.pdb
