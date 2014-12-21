@@ -1,0 +1,5 @@
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyGuiController\bin\Debug\MonopolyGuiController.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyGuiController\bin\Debug\MonopolyGuiController.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyGuiController\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyGuiController\obj\Debug\MonopolyGuiController.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyGuiController\obj\Debug\MonopolyGuiController.pdb

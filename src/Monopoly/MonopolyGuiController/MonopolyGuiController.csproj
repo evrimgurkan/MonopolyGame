@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EDE38601-E19E-4D54-ADC2-8B82F9F33FAF}</ProjectGuid>
+    <ProjectGuid>{E002DAEE-8399-4A62-B8AD-E47DD03625EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonopolyController</RootNamespace>
-    <AssemblyName>MonopolyController</AssemblyName>
+    <RootNamespace>MonopolyGuiController</RootNamespace>
+    <AssemblyName>MonopolyGuiController</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,26 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiceController.cs" />
-    <Compile Include="MonopolyGameController.cs" />
+    <Compile Include="MonopolyGuiController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{AC388CFF-BCB0-468B-AE8D-C5430DE38C04}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonopolyGuiController\MonopolyGuiController.csproj">
-      <Project>{E002DAEE-8399-4A62-B8AD-E47DD03625EA}</Project>
-      <Name>MonopolyGuiController</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Monopoly\Monopoly.csproj">
-      <Project>{2E873B7C-975A-48BC-BF6C-E00D6FE4BB88}</Project>
-      <Name>Monopoly</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

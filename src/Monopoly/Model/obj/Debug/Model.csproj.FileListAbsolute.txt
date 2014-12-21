@@ -3,13 +3,13 @@ C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\obj\Deb
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\obj\Debug\BusinessLayer.pdb
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\bin\Debug\BusinessLayer.dll
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\BusinessLayer\bin\Debug\BusinessLayer.pdb
-C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\BusinessLayer.dll
-C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\BusinessLayer.pdb
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\BusinessLayer.dll
-C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\BusinessLayer.pdb
 F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\ResolveAssemblyReference.cache
 F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.dll
 F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.pdb
 F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.dll
 F:\projects\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\Model.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.pdb
