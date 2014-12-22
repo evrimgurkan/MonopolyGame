@@ -18,12 +18,12 @@ namespace Model
             taxAmount = _taxAmount;
         }
 
-        public override TaxType getTaxType()
+        public override TaxType getTaxType() // is really need? 
         {
             return _type;
         }
 
-        public override int getTaxPrice(PaymentType type)
+        public override int getTaxPrice()
         {
             return taxAmount;
         }
@@ -35,7 +35,9 @@ namespace Model
 
         public override void applyAction()
         {
-            // Do something
+            GameController controller = GameController.GameControllerInstance;
+            // TODO: Should be checked player cash in bank
+            controller.getBank().takeMoneyFromPlayer(getTaxPrice(), controller.getCurrentPlayer());
         }
     }
 }

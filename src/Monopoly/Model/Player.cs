@@ -66,6 +66,11 @@ namespace Model
         {
             return playerIterator;
         }
+
+        public int GetTotalAssetsAmount()
+        {
+            return 0; // Calculate
+        }
         #endregion
 
     }

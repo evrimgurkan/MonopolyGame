@@ -12,7 +12,5 @@ F:\projects\MonopolyGame\src\Monopoly\MonopolyController\obj\Debug\MonopolyContr
 F:\projects\MonopolyGame\src\Monopoly\MonopolyController\obj\Debug\MonopolyController.pdb
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\Model.dll
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\Model.pdb
-F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\Monopoly.dll
-F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\MonopolyGuiController.dll
-F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\Monopoly.pdb
-F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\MonopolyGuiController.pdb
+F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\IMonopoly.dll
+F:\projects\MonopolyGame\src\Monopoly\MonopolyController\bin\Debug\IMonopoly.pdb

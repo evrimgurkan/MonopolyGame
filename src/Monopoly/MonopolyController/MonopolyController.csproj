@@ -53,6 +53,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IMonopoly\IMonopoly.csproj">
+      <Project>{101AAA67-2B05-4B52-AB57-A8ECF701B001}</Project>
+      <Name>IMonopoly</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{AC388CFF-BCB0-468B-AE8D-C5430DE38C04}</Project>
       <Name>Model</Name>

@@ -11,7 +11,6 @@ namespace Model
         private TaxType _type;
         private string _label;
         private int taxAmount;
-
         public IncomeTax(string label, int _taxAmount)
         {
             _type = TaxType.TYPE_INCOME;
@@ -24,15 +23,16 @@ namespace Model
             return _type;
         }
 
-        public override int getTaxPrice(PaymentType type)
+        public override int getTaxPrice()
         {
-            if (type == PaymentType.TYPE_CONSTANT_AMOUNT)
+            return taxAmount;
+        }
+
+        public void setPaymentType(PaymentType _paymentType)
+        {
+            if (_paymentType == PaymentType.TYPE_TEN_PERCENT_AMOUNT)
             {
-                return taxAmount;
-            }
-            else
-            {
-                return 0; // Should be corrected later
+                taxAmount = Convert.ToInt32(GameController.GameControllerInstance.getCurrentPlayer().GetTotalAssetsAmount() * 0.1);
             }
         }
 
@@ -43,7 +43,10 @@ namespace Model
 
         public override void applyAction()
         {
-            // Do something
+            GameController controller = GameController.GameControllerInstance;
+            // TODO: Popup a window and select Payment type (%10 or 200$)
+            // TODO: Should be checked player cash in bank
+            controller.getBank().takeMoneyFromPlayer(getTaxPrice(), controller.getCurrentPlayer());
         }
     }
 }

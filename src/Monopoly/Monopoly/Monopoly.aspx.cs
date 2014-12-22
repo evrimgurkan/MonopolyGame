@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MonopolyController;
+using IMonopoly;
 
 namespace Monopoly
 {
-    public partial class _Default : System.Web.UI.Page
+    public partial class _Default : System.Web.UI.Page , Observer
     {
         private static MonopolyGameController mGameController = new MonopolyGameController();
         private static DiceController diceController = new DiceController();
@@ -16,6 +17,8 @@ namespace Monopoly
         private static int currentPlayerIndex = -1;
         protected void Page_Load(object sender, EventArgs e)
         {
+            mGameController.Attach(this);
+
             if (lbLogs.Items.Count == 0)
             {
                 playersCount = mGameController.getPlayersCount();
@@ -83,5 +86,14 @@ namespace Monopoly
             currentPlayerIndex = mGameController.getNextPlayerIndex(currentPlayerIndex);
             lbLogs.Items.Add("Next player is : " + mGameController.getPlayerName(currentPlayerIndex));
         }
+
+        #region Observer Members
+
+        // Update Comes From Controller
+        public void Update()
+        {
+        }
+
+        #endregion
     }
 }

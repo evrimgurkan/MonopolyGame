@@ -19,7 +19,7 @@ namespace Model
             TYPE_CONSTANT_AMOUNT
         }
 
-        public abstract int getTaxPrice(PaymentType type);
+        public abstract int getTaxPrice();
         public abstract TaxType getTaxType();
         public abstract string getLabel();
         public abstract void applyAction();
