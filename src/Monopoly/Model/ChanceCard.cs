@@ -84,9 +84,12 @@ namespace Model
                 case OrderType.WonCompetition:
                     break;
                 default:
+                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
                     break;
             }
-            return null;
+            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
         }
     }
 }

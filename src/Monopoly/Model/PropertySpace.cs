@@ -21,7 +21,7 @@ namespace Model
 
         public override void playAction()
         {
-            // Do something
+            _pCell.applyAction();
         }
     }
 }

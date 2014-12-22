@@ -25,5 +25,10 @@ namespace Model
             this.hasOwner = false;
             this.purchasePrice = _cellprice;
         }
+
+        public override void applyAction()
+        {
+
+        }
     }
 }

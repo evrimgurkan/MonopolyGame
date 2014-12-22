@@ -74,9 +74,12 @@ namespace Model
                 case OrderType.FromSaleofStock:
                     break;
                 default:
+                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
                     break;
             }
-            return null;
+            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
         }
 
         public override void applyAction()

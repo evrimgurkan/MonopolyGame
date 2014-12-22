@@ -25,5 +25,57 @@ namespace Model
             this.hasOwner = false;
             this.purchasePrice = _cellprice;
         }
+
+        private void calculateRentAmount()
+        {
+            int ownedCellCount = 1;
+            Cell nextCell = null;
+            GameController controller = GameController.GameControllerInstance;
+            for (int i = 1; i < cellGroup.Count(); i++)
+            {
+                nextCell = cellGroup.GetNextCell(this);
+                if (nextCell != null &&
+                    nextCell.hasOwner &&
+                    nextCell.owner.playerID == controller.getCurrentPlayer().playerID)
+                {
+                    ownedCellCount++;
+                }
+            }
+
+            rentAmount *= Convert.ToInt32(Math.Pow(2, ownedCellCount));
+        }
+
+        public override void applyAction()
+        {
+            GameController controller = GameController.GameControllerInstance;
+            if (this.hasOwner)
+            {
+                // Pay rent
+                calculateRentAmount();
+                // TODO: Check Player cash
+                if (controller.getCurrentPlayer().cash > this.rentPrice)
+                {
+                    controller.getBank().takeMoneyFromPlayer(rentPrice, controller.getCurrentPlayer());
+                    controller.getBank().payMoneyToPlayer(rentPrice, this.owner);
+                }
+                else
+                {
+                    //TODO: Update ui, Sell property to pay rent price
+                }
+            }
+            else
+            {
+                // Buy property or cancel
+                // TODO: UPDATE UI
+                // TODO: Check user cash
+                if (controller.getCurrentPlayer().cash > this.purchasePrice)
+                {
+                    controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
+                    this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
+                    controller.getCurrentPlayer().AddAssest(this);
+                }
+            }
+        }
+
     }
 }

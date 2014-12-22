@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    abstract class Cell
+    public abstract class Cell
     {
         private CellGroup _cellGroup;
         public CellGroup cellGroup
@@ -59,5 +59,7 @@ namespace Model
         public Cell()
         {
         }
+
+        public abstract void applyAction();
     }
 }

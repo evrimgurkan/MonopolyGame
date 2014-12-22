@@ -37,7 +37,15 @@ namespace Model
             set { isInJail = value; }
         }
 
+        private int player_id;
+        public int playerID
+        {
+            get { return player_id; }
+            set { player_id = value; }
+        }
+
         private Iterator playerIterator;
+        private List<Cell> Assets;
         #endregion
 
         #region Constructor
@@ -46,6 +54,7 @@ namespace Model
             playerName = _name;
             cashAmount = 1000;
             playerSymbol = _symbol;
+            Assets = new List<Cell>();
         }
 
         public Player() 
@@ -70,6 +79,16 @@ namespace Model
         public int GetTotalAssetsAmount()
         {
             return 0; // Calculate
+        }
+
+        public void AddAssest(Cell assset)
+        {
+            Assets.Add(assset);
+        }
+
+        public void RemoveAssest(Cell assset)
+        {
+            Assets.Remove(assset);
         }
         #endregion
 

@@ -59,14 +59,5 @@ namespace Model
             this.cells.Add(_propCell);
         }
 
-        public List<Cell> getOwnedCells()
-        {
-            return this.cells; //TODO
-        }
-
-        public List<Cell> getUnOwnedCells()
-        {
-            return this.cells;//TODO
-        }
     }
 }

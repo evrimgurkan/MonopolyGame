@@ -15,6 +15,5 @@ namespace Model
         {
             this.cells.Add(_cell);
         }
-
     }
 }
