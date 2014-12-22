@@ -47,10 +47,11 @@ namespace Model
         protected override Order getOrder(OrderType type)
         {
             GameController controller = GameController.GameControllerInstance;
+            Order order = null;
             switch (type)
             {
                 case OrderType.AdvancetoGo:
-                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
                                                 controller.getBank());
                     break;
                 case OrderType.AdvancetoIllinoisAve:
@@ -84,9 +85,11 @@ namespace Model
                 case OrderType.WonCompetition:
                     break;
                 default:
+                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
                     break;
             }
-            return null;
+            return order;
         }
     }
 }
