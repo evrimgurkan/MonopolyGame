@@ -37,10 +37,11 @@ namespace Model
         protected override Order getOrder(OrderType type)
         {
             GameController controller = GameController.GameControllerInstance;
+            Order order = null;
             switch (type)
             {
                 case OrderType.AdvancetoGo:
-                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
                                                 controller.getBank());
                     break;
                 case OrderType.BankErrorInYourFavor:
@@ -74,12 +75,11 @@ namespace Model
                 case OrderType.FromSaleofStock:
                     break;
                 default:
-                    return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
                                                 controller.getBank());
                     break;
             }
-            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank());
+            return order;
         }
 
         public override void applyAction()
