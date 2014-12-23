@@ -67,9 +67,88 @@ namespace Model
             this.purchasePrice = _cellprice;
         }
 
+        private void calculateRentAmount()
+        {
+            if (hasHotel)
+            {
+                rentAmount = hotelPrice;
+            }
+            else if (houseCount > 0)
+            {
+                switch (houseCount)
+                {
+                    case 1:
+                        rentAmount = onehouseCost;
+                        break;
+                    case 2:
+                        rentAmount = twohouseCost;
+                        break;
+                    case 3:
+                        rentAmount = threehouseCost;
+                        break;
+                    case 4:
+                        rentAmount = fourhouseCost;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                int ownedCellCount = 1;
+                Cell nextCell = null;
+                GameController controller = GameController.GameControllerInstance;
+                for (int i = 1; i < cellGroup.Count(); i++)
+                {
+                    nextCell = cellGroup.GetNextCell(this);
+                    if (nextCell != null &&
+                        nextCell.hasOwner &&
+                        nextCell.owner.playerID == this.owner.playerID)
+                    {
+                        ownedCellCount++;
+                    }
+                }
+                if (ownedCellCount == cellGroup.Count())
+                {
+                    rentAmount *= 2;
+                }
+            }
+        }
+
         public override void applyAction()
         {
-
+            GameController controller = GameController.GameControllerInstance;
+            if (this.hasOwner)
+            {
+                // Pay rent
+                calculateRentAmount();
+                // TODO: Check Player cash
+                if (controller.getCurrentPlayer().cash > this.rentPrice)
+                {
+                    controller.getBank().takeMoneyFromPlayer(rentPrice, controller.getCurrentPlayer());
+                    controller.getBank().payMoneyToPlayer(rentPrice, this.owner);
+                }
+                else
+                {
+                    //TODO: Update ui, Sell property to pay rent price
+                }
+            }
+            else
+            {
+                // Buy property or cancel
+                // TODO: UPDATE UI
+                // TODO: Check user cash
+                if (controller.getCurrentPlayer().cash > this.purchasePrice)
+                {
+                    controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
+                    this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
+                    controller.getCurrentPlayer().AddAssest(this);
+                }
+                else
+                {
+                    //TODO: Update ui, Sell property to pay rent price
+                }
+            }
         }
     }
 }

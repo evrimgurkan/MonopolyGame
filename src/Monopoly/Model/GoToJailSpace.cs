@@ -21,6 +21,12 @@ namespace Model
         public override void playAction()
         {
             // Do something
+            // Update current player position to Jail space
+            // update player.inJail
+
+            GameController controller = GameController.GameControllerInstance;
+            controller.getCurrentPlayer().inJail = true;
+            controller.moveBackPlayer(controller.getCurrentPlayer(), 20);// Go jail space
         }
     }
 }

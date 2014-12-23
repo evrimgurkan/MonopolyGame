@@ -296,8 +296,6 @@ namespace Model
 
         private const string utilities1_name = "Electric Company";
         private const string utilities2_name = "Water Works";
-        private const int utilities_rentMultiplierWithDice = 2;
-        private const int utilities_rentMultiplierAllWithDice = 10; // Owned all utilities
         private const int utilities_cost = 150;
         private const int utilities_mortgagePrice = 75;
 
@@ -346,7 +344,7 @@ namespace Model
         private int maxCountPlayer = 5;
         private int luxuryTaxAmount = 75;
         private int incomeTaxAmount = 200;
-        private int passing_go_amount = 200;
+        private int passingGoAmount = 200;
         private string incomeLabel = "Pay %10 or 200$";
         private string luxuryLabel = "Luxury Tax 75$";
         private string jailName = "JAIL";
@@ -366,6 +364,8 @@ namespace Model
         private List<Card> listChanceCard;
         private List<Card> listCChest;
         private Command command;
+
+        private int currPlayerIndex = 0; // Should be removed
         #endregion
 
         private static GameController instance;
@@ -514,7 +514,7 @@ namespace Model
 
             #region ADD UTILITY1 SPACE
             UtilityCell utility1_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
-                                                        utilities1_name, utilities_cost, utilities_rentMultiplierWithDice);
+                                                        utilities1_name, utilities_cost);
             npUtilitiesCellGroup.addCell(utility1_cell);
             listSpace.Add(new PropertySpace(utility1_cell));
             #endregion
@@ -637,7 +637,7 @@ namespace Model
 
             #region ADD UTILITY2 SPACE
             UtilityCell utility2_cell = new UtilityCell(npUtilitiesCellGroup, utilities_mortgagePrice,
-                                                        utilities2_name, utilities_cost, utilities_rentMultiplierWithDice);
+                                                        utilities2_name, utilities_cost);
             npUtilitiesCellGroup.addCell(utility2_cell);
             listSpace.Add(new PropertySpace(utility2_cell));
             #endregion
@@ -840,6 +840,7 @@ namespace Model
 
         public int getCurrentIndex(int playerIndex, int count)
         {
+            currPlayerIndex = playerIndex;
             Iterator it = listPlayer[playerIndex].GetIterator();
 
             for (int i = 0; i < count; i++)
@@ -847,6 +848,16 @@ namespace Model
                 it.Next();
             }
             return it.CurrentIndex();
+        }
+
+        public void moveBackPlayer(Player player, int spaceIndex)
+        {
+            Iterator it = player.GetIterator();
+
+            for (int i = 0; i < spaceIndex; i++)
+            {
+                it.Prev();
+            }
         }
 
         public void showMessage()
@@ -862,9 +873,14 @@ namespace Model
             return bank;
         }
 
+        public Dice getDice()
+        {
+            return dice;
+        }
+
         public Player getCurrentPlayer()
         {
-            return listPlayer[0]; // TODO return correct player
+            return listPlayer[currPlayerIndex]; // TODO return correct player
         }
 
         public void SetCommand(Command command)
@@ -896,6 +912,10 @@ namespace Model
         public int getPlayersCount()
         {
             return listPlayer.Count();
+        }
+        public int getPassingGoAmount()
+        {
+            return passingGoAmount;
         }
     }
 }

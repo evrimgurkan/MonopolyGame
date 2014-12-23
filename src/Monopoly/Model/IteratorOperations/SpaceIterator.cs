@@ -37,6 +37,28 @@ namespace Model.IteratorOperations
  
             return ret;
         }
+
+        // Gets prev iteration item
+        public override Space Prev()
+        {
+            Space ret = null;
+            if (IsStartPoint())
+            {
+                _current = _listSpace.Count;
+            }
+            if (_current > 0)
+            {
+                ret = _listSpace[--_current];
+            }
+
+            return ret;
+        }
+
+        // Gets whether iterations are in start point
+        public override bool IsStartPoint()
+        {
+            return _current == 0;
+        }
  
         // Gets current iteration item
         public override Space CurrentItem()

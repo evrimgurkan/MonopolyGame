@@ -20,7 +20,8 @@ namespace Model
 
         public override void playAction()
         {
-            // Do something
+            GameController controller = GameController.GameControllerInstance;
+            controller.getBank().payMoneyToPlayer(controller.getPassingGoAmount(), controller.getCurrentPlayer());
         }
     }
 }

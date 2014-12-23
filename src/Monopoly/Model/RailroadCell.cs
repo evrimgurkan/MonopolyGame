@@ -36,7 +36,7 @@ namespace Model
                 nextCell = cellGroup.GetNextCell(this);
                 if (nextCell != null &&
                     nextCell.hasOwner &&
-                    nextCell.owner.playerID == controller.getCurrentPlayer().playerID)
+                    nextCell.owner.playerID == this.owner.playerID)
                 {
                     ownedCellCount++;
                 }
@@ -73,6 +73,10 @@ namespace Model
                     controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
                     this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
                     controller.getCurrentPlayer().AddAssest(this);
+                }
+                else
+                {
+                    //TODO: Update ui, Sell property to pay rent price
                 }
             }
         }

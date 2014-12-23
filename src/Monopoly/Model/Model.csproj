@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Build.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardSpace.cs" />
     <Compile Include="Cell.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="NonPurchasableSpace.cs" />
     <Compile Include="PropertyCellGroup.cs" />
     <Compile Include="PurchasableSpace.cs" />
+    <Compile Include="Sell.cs" />
     <Compile Include="Space.cs" />
     <Compile Include="Tax.cs" />
     <Compile Include="TaxSpace.cs" />

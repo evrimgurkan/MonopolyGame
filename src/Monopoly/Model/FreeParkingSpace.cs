@@ -20,7 +20,7 @@ namespace Model
 
         public override void playAction()
         {
-            // Do something
+            // Do nothing
         }
     }
 }

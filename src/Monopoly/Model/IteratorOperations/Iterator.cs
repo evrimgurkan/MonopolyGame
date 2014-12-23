@@ -9,7 +9,9 @@ namespace Model.IteratorOperations
     {
         public abstract Space First();
         public abstract Space Next();
+        public abstract Space Prev();
         public abstract bool IsDone();
+        public abstract bool IsStartPoint();
         public abstract int CurrentIndex();
         public abstract Space CurrentItem();
     }

@@ -3,3 +3,8 @@ F:\projects\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.dll
 F:\projects\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.pdb
 F:\projects\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.dll
 F:\projects\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\IMonopoly\bin\Debug\IMonopoly.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\IMonopoly\obj\Debug\IMonopoly.pdb
