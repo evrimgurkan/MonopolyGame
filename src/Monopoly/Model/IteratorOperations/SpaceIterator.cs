@@ -26,6 +26,10 @@ namespace Model.IteratorOperations
         public override Space Next()
         {
             Space ret = null;
+            if (IsDone())
+            {
+                _current = -1;
+            }
             if (_current < _listSpace.Count - 1)
             {
                 ret = _listSpace[++_current];
