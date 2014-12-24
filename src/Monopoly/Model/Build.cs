@@ -18,18 +18,19 @@ namespace Model
 
         public void AddHouse(Player player, Cell cell)
         {
-            int currentCellHouseCount = cell.houseCount;
+            PropertyCell pCell = (PropertyCell)cell;
+            int currentCellHouseCount = pCell.houseCount;
 
-            if (cell.owner.playerID == player.playerID)
+            if (pCell.owner.playerID == player.playerID)
             {
+                GameController controller = GameController.GameControllerInstance;
                 if (currentCellHouseCount == 4)
                 {
-                    Cell nextCell = null;
+                    PropertyCell nextCell = null;
                     bool isBuildable = false;
-                    GameController controller = GameController.GameControllerInstance;
-                    for (int i = 1; i < cell.cellGroup.Count(); i++)
+                    for (int i = 1; i < pCell.cellGroup.Count(); i++)
                     {
-                        nextCell = cell.cellGroup.GetNextCell(cell);
+                        nextCell = (PropertyCell)pCell.cellGroup.GetNextCell(pCell);
                         if (nextCell != null &&
                             nextCell.hasOwner &&
                             nextCell.owner.playerID == player.playerID &&
@@ -40,20 +41,28 @@ namespace Model
                     }
                     if (isBuildable)
                     {
-                        cell.houseCount = 0;
-                        cell.hasHotel = true;
-                        // TODO: UI should be updated
+                        PropertyCellGroup pCellGroup = (PropertyCellGroup)pCell.cellGroup;
+                        if (player.cash >= pCellGroup.costPerHotel)
+                        {
+                            controller.getBank().takeMoneyFromPlayer(pCellGroup.costPerHotel, controller.getCurrentPlayer());
+                            pCell.houseCount = 0;
+                            pCell.hasHotel = true;
+                            // TODO: UI should be updated
+                        }
+                        else
+                        {
+                            // TODO: UI should be updated
+                        }
                     }
                 }
                 else if ((currentCellHouseCount < 4) &&
-                        !cell.hasHotel)
+                        !pCell.hasHotel)
                 {
-                    Cell nextCell = null;
+                    PropertyCell nextCell = null;
                     bool isBuildable = false;
-                    GameController controller = GameController.GameControllerInstance;
-                    for (int i = 1; i < cell.cellGroup.Count(); i++)
+                    for (int i = 1; i < pCell.cellGroup.Count(); i++)
                     {
-                        nextCell = cell.cellGroup.GetNextCell(cell);
+                        nextCell = (PropertyCell)pCell.cellGroup.GetNextCell(pCell);
                         if (nextCell != null &&
                             nextCell.hasOwner &&
                             nextCell.owner.playerID == player.playerID &&
@@ -64,13 +73,26 @@ namespace Model
                     }
                     if (isBuildable)
                     {
-                        cell.houseCount++;
-                        // TODO: UI should be updated
+                        PropertyCellGroup pCellGroup = (PropertyCellGroup)pCell.cellGroup;
+
+                        if (player.cash >= pCellGroup.costPerHouse)
+                        {
+                            controller.getBank().takeMoneyFromPlayer(pCellGroup.costPerHouse, controller.getCurrentPlayer());
+                            pCell.houseCount++;
+                            // TODO: UI should be updated
+                        }
+                        else
+                        {
+                            // TODO: UI should be updated
+                        }
                     }
                 }
 
             }
-            // TODO: Notify error in else statement
+            else
+            {
+                // TODO: Notify error in else statement
+            }
         }
     }
 }

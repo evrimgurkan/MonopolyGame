@@ -5,10 +5,8 @@ using System.Text;
 
 namespace IMonopoly
 {
-    public interface Observer
+    public interface State
     {
-        void Update();
-
-        void SendMessageToView(string message, int money);
+        bool IsInJail();
     }
 }

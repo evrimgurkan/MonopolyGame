@@ -49,6 +49,21 @@ namespace Model
             set { rentAmount = value; }
         }
 
+
+        private int _houseCount;
+        public int houseCount
+        {
+            get { return _houseCount; }
+            set { _houseCount = value; }
+        }
+
+        private bool _hasHotel;
+        public bool hasHotel
+        {
+            get { return _hasHotel; }
+            set { _hasHotel = value; }
+        }
+
         public PropertyCell(CellGroup _cellGrp, int _mortgageVal, string _name, int _cellprice,
             int _hotelPrice, int _onehouseCost, int _twohouseCost, int _threehouseCost, int _fourhouseCost, int _rentPrice)
         {
@@ -118,11 +133,15 @@ namespace Model
         public override void applyAction()
         {
             GameController controller = GameController.GameControllerInstance;
+
+            ////
+            controller.SendMessageToView("benden sana gelsin be güzelim biz ayakta da gireiz PROPERTY", 1000);
+            ////
+
             if (this.hasOwner)
             {
                 // Pay rent
                 calculateRentAmount();
-                // TODO: Check Player cash
                 if (controller.getCurrentPlayer().cash > this.rentPrice)
                 {
                     controller.getBank().takeMoneyFromPlayer(rentPrice, controller.getCurrentPlayer());
@@ -140,9 +159,11 @@ namespace Model
                 // TODO: Check user cash
                 if (controller.getCurrentPlayer().cash > this.purchasePrice)
                 {
-                    controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
-                    this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
-                    controller.getCurrentPlayer().AddAssest(this);
+                    // TODO: Order should be used by VIEW 
+
+                    //controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
+                    //this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
+                    //controller.getCurrentPlayer().AddAssest(this);
                 }
                 else
                 {

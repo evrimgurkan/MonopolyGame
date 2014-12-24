@@ -5,10 +5,11 @@ using System.Text;
 using Model.CommandOperations;
 using Model.CommandOperations.Orders;
 using Model.IteratorOperations;
+using IMonopoly;
 
 namespace Model
 {
-    public class GameController
+    public class GameController : Subject
     {
 
         #region Constants
@@ -364,13 +365,16 @@ namespace Model
         private List<Card> listChanceCard;
         private List<Card> listCChest;
         private Command command;
-
+        private State state;
         private int currPlayerIndex = 0; // Should be removed
         #endregion
 
         private static GameController instance;
-        private GameController()
-        { }
+
+        private GameController(State _state)
+        {
+            state = _state;
+        }
 
         public static GameController GameControllerInstance
         {
@@ -378,7 +382,7 @@ namespace Model
             {
                 if (instance == null)
                 {
-                    instance = new GameController();
+                    instance = new GameController(new PlayableState());
                 }
                 return instance;
             }
@@ -814,6 +818,21 @@ namespace Model
             listChanceCard.Add(card);
         }
 
+        public void setState(State _state)
+        {
+            state = _state;
+        }
+
+        public State getState()
+        {
+            return state;
+        }
+
+        public bool IsInJail()
+        {
+            return state.IsInJail();
+        }
+
         private Card getRandomCard(List<Card> cardlist)
         {
             Random rnd = new Random();
@@ -860,6 +879,12 @@ namespace Model
             }
         }
 
+        public Space getCurrentSpace()
+        {
+            Iterator it = listPlayer[currPlayerIndex].GetIterator();
+            return it.CurrentItem();
+        }
+
         public void showMessage()
         {
         }
@@ -897,25 +922,41 @@ namespace Model
         {
             return listPlayer[index].name;
         }
+
         public int getPlayerCash(int index)
         {
             return listPlayer[index].cash;
         }
+
         public bool isPlayerJail(int index)
         {
             return listPlayer[index].inJail;
         }
+
         public Symbol getPlayerSymbol(int index)
         {
             return listPlayer[index].symbol;
         }
+
         public int getPlayersCount()
         {
             return listPlayer.Count();
         }
+
         public int getPassingGoAmount()
         {
             return passingGoAmount;
+        }
+
+        public void buyCurrentProperty()
+        {
+            PropertySpace pSpace = (PropertySpace)getCurrentSpace();
+            Order order = new BuyPropertyOrder(getCurrentPlayer(),
+                                                getBank(), pSpace.pCell);
+
+            Command _command = new CardCommand(order);
+            SetCommand(_command);
+            ExecuteCommand();
         }
     }
 }

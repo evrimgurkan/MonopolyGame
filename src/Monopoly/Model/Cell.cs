@@ -56,20 +56,6 @@ namespace Model
             set { _price = value; }
         }
 
-        private int _houseCount;
-        public int houseCount
-        {
-            get { return _houseCount; }
-            set { _houseCount = value; }
-        }
-
-        private bool _hasHotel;
-        public bool hasHotel
-        {
-            get { return _hasHotel; }
-            set { _hasHotel = value; }
-        }
-
         public Cell()
         {
         }

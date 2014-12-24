@@ -75,9 +75,11 @@ namespace Model
                 // TODO: Check user cash
                 if (controller.getCurrentPlayer().cash > this.purchasePrice)
                 {
-                    controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
-                    this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
-                    controller.getCurrentPlayer().AddAssest(this);
+                    // TODO: Order should be used by VIEW 
+                 
+                    //controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
+                    //this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
+                    //controller.getCurrentPlayer().AddAssest(this);
                 }
                 else
                 {

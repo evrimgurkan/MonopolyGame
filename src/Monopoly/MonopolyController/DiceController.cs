@@ -11,7 +11,6 @@ namespace MonopolyController
         private Dice dice = new Dice();
         public int getDieOneValue()
         {
-            dice.rollDice();
             return dice.diceOne;
         }
         public int getDieTwoValue()
@@ -21,6 +20,10 @@ namespace MonopolyController
         public bool isDiceDouble()
         {
             return dice.isDiceDouble();
+        }
+        public void RollDice()
+        {
+            dice.rollDice();
         }
     }
 }

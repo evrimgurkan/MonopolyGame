@@ -27,5 +27,13 @@ namespace IMonopoly
                 o.Update();
             }
         }
+
+        public void SendMessageToView(string message,int money)
+        {
+            foreach (Observer o in observers)
+            {
+                o.SendMessageToView(message,money);
+            }
+        }
     }
 }

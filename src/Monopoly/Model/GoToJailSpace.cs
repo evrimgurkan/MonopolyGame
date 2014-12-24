@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using IMonopoly;
 
 namespace Model
 {
@@ -27,6 +28,7 @@ namespace Model
             GameController controller = GameController.GameControllerInstance;
             controller.getCurrentPlayer().inJail = true;
             controller.moveBackPlayer(controller.getCurrentPlayer(), 20);// Go jail space
+            controller.setState(new InJailState());
         }
     }
 }

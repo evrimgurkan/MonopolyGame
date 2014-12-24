@@ -89,7 +89,8 @@ namespace Model
                                                 controller.getBank());
                     break;
             }
-            return order;
+            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
+                                                controller.getBank()); ;
         }
     }
 }

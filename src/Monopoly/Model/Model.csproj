@@ -58,6 +58,8 @@
     <Compile Include="CommandOperations\CommandReceiver.cs" />
     <Compile Include="CommandOperations\Order.cs" />
     <Compile Include="CommandOperations\Orders\AdvancetoGoOrder.cs" />
+    <Compile Include="CommandOperations\Orders\BuyPropertyOrder.cs" />
+    <Compile Include="CommandOperations\OrderType\BuyPropertyCellOrder.cs" />
     <Compile Include="CommandOperations\OrderType\CollectFromBankOrder.cs" />
     <Compile Include="CommandOperations\OrderType\CollectFromPlayersOrder.cs" />
     <Compile Include="CommandOperations\OrderType\GetOutFromJailOrder.cs" />
@@ -99,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMonopoly\IMonopoly.csproj">
+      <Project>{101AAA67-2B05-4B52-AB57-A8ECF701B001}</Project>
+      <Name>IMonopoly</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

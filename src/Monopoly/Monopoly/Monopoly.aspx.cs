@@ -15,6 +15,7 @@ namespace Monopoly
         private static DiceController diceController = new DiceController();
         private static int playersCount = -1;
         private static int currentPlayerIndex = -1;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             mGameController.Attach(this);
@@ -43,6 +44,7 @@ namespace Monopoly
         protected void btnRollDice_Click(object sender, EventArgs e)
         {
             btnRollDice.Visible = false;
+            diceController.RollDice();
             int dieOne = diceController.getDieOneValue();
             int dieTwo = diceController.getDieTwoValue();
             lbLogs.Items.Add("Dice1 : " + dieOne +
@@ -80,11 +82,17 @@ namespace Monopoly
             btnFinishTurn.Visible = false;
             btnRollDice.Visible = true;
         }
+
         private void finishTurn()
         {
             // select next player
             currentPlayerIndex = mGameController.getNextPlayerIndex(currentPlayerIndex);
             lbLogs.Items.Add("Next player is : " + mGameController.getPlayerName(currentPlayerIndex));
+
+            // TODO: UI should be update for in jail state player. 
+            // A pop up should be displayed and choice between roll dice or pay money
+            bool inJail = mGameController.IsInJail();
+            lbLogs.Items.Add(mGameController.getPlayerName(currentPlayerIndex) + " is in Jail ???  " + inJail.ToString());
         }
 
         #region Observer Members
@@ -92,6 +100,11 @@ namespace Monopoly
         // Update Comes From Controller
         public void Update()
         {
+        }
+
+        public void SendMessageToView(string message, int money)
+        {
+            lbLogs.Items.Add(message + " money : " + money.ToString());
         }
 
         #endregion
