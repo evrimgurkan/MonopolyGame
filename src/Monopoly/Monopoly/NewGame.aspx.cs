@@ -17,11 +17,16 @@ namespace Monopoly
 
         }
 
-        protected void btnNewGame_Click(object sender, EventArgs e)
+        protected void btnNewGame_Click1(object sender, ImageClickEventArgs e)
         {
             MonopolyGameController mGameController = new MonopolyGameController();
             mGameController.initBoard();
             Response.Redirect(createPlayerPage);
+        }
+
+        protected void btnExit_Click(object sender, ImageClickEventArgs e)
+        {
+
         }
     }
 }

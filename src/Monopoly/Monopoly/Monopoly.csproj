@@ -60,6 +60,14 @@
     <Content Include="icons\Indian.png" />
     <Content Include="icons\pirate.png" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\Buttons\AddPlayers.png" />
+    <Content Include="images\Buttons\AddPlayersInactive.png" />
+    <Content Include="images\Buttons\Exit.png" />
+    <Content Include="images\Buttons\Help.png" />
+    <Content Include="images\Buttons\NewGame.png" />
+    <Content Include="images\Buttons\Options.png" />
+    <Content Include="images\Buttons\StartGame.png" />
+    <Content Include="images\Buttons\StartGameInactive.png" />
     <Content Include="images\monop.gif" />
     <Content Include="images\NewGame.png" />
     <Content Include="images\_bg.png" />

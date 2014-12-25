@@ -23,13 +23,31 @@ namespace Monopoly {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
         /// btnNewGame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewGame;
+        protected global::System.Web.UI.WebControls.ImageButton btnNewGame;
+        
+        /// <summary>
+        /// btnHelp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnHelp;
         
         /// <summary>
         /// btnOptions control.
@@ -38,15 +56,15 @@ namespace Monopoly {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOptions;
+        protected global::System.Web.UI.WebControls.ImageButton btnOptions;
         
         /// <summary>
-        /// btnRules control.
+        /// btnExit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRules;
+        protected global::System.Web.UI.WebControls.ImageButton btnExit;
     }
 }
