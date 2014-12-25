@@ -55,6 +55,9 @@
   <ItemGroup>
     <Content Include="CreatePlayer.aspx" />
     <Content Include="css\cube.css" />
+    <Content Include="UserControls\BuyButtons.ascx" />
+    <Content Include="UserControls\BuyCard.ascx" />
+    <Content Include="UserControls\Info.ascx" />
     <Content Include="Monopoly.aspx" />
     <Content Include="items.aspx" />
     <Content Include="js\rotate-box.js" />
@@ -69,6 +72,27 @@
     </Compile>
     <Compile Include="CreatePlayer.aspx.designer.cs">
       <DependentUpon>CreatePlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BuyButtons.ascx.cs">
+      <DependentUpon>BuyButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BuyButtons.ascx.designer.cs">
+      <DependentUpon>BuyButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BuyCard.ascx.cs">
+      <DependentUpon>BuyCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BuyCard.ascx.designer.cs">
+      <DependentUpon>BuyCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Info.ascx.cs">
+      <DependentUpon>Info.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Info.ascx.designer.cs">
+      <DependentUpon>Info.ascx</DependentUpon>
     </Compile>
     <Compile Include="Monopoly.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>

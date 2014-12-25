@@ -8,7 +8,12 @@ namespace Model
 {
     public class Bank : CommandReceiver
     {
+
         private int bankCash;
+        public int cash
+        {
+            get { return this.bankCash; }
+        }
 
         public Bank()
         {

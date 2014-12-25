@@ -105,7 +105,36 @@ namespace Monopoly
         public void SendMessageToView(string message, int money)
         {
             lbLogs.Items.Add(message + " money : " + money.ToString());
+            bankInfo.Cash = money.ToString();
+            bankInfo.addProperty("Done !");
+
+
+
         }
+
+        public void AddLog(string message)
+        {
+            lbLogs.Items.Add(message);
+        }
+
+        public void OpenItemsPage(Color color, int title, int rent,
+                                    int oneHouseRent, int twoHouseRent,
+                                    int threeHouseRent, int fourHouseRent,
+                                    int hotelRent, int mortgagedValue,
+                                    int housePrice, int hotelPrice)
+        {
+            items item = new items(color,  title,  rent, 
+                                     oneHouseRent,  twoHouseRent,
+                                     threeHouseRent,  fourHouseRent,
+                                     hotelRent,  mortgagedValue,
+                                     housePrice,  hotelPrice);
+
+            
+
+            HttpContext.Current.Response.Write("<SCRIPT language=\"javascript\">open('items.aspx', '_blank','status=yes,resizable=yes,scrollbars=yes, width=340, height=370');</script>");
+
+        }
+
 
         #endregion
     }

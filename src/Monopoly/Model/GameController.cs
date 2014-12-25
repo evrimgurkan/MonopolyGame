@@ -952,7 +952,7 @@ namespace Model
         {
             PropertySpace pSpace = (PropertySpace)getCurrentSpace();
             Order order = new BuyPropertyOrder(getCurrentPlayer(),
-                                                getBank(), pSpace.pCell);
+                                               getBank(), pSpace.pCell);
 
             Command _command = new CardCommand(order);
             SetCommand(_command);

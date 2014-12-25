@@ -1,4 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Monopoly.aspx.cs" Inherits="Monopoly._Default" %>
+<%@ Register Src="~/UserControls/Info.ascx" TagName="Info" TagPrefix="uc" %>
+<%@ Register Src="~/UserControls/BuyCard.ascx" TagName="BuyCard" TagPrefix="uc2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -311,6 +313,12 @@
            -o-transform: translateZ( -100px ) rotateX(   90deg );
               transform: translateZ( -100px ) rotateX(   90deg );
     }
+      .style1
+      {
+          color: #000099;
+          font-weight: bold;
+          font-size: large;
+      }
   </style>
 </head>
 <body>
@@ -324,6 +332,7 @@
                         <td rowspan ="13">
                             <div id="playerContainer" class="PlayerContainer">
                                 PLAYERS INFO
+                                <uc2:BuyCard ID=BuyCard runat="server"></uc2:BuyCard>
                             </div>
                         </td>
                         <td colspan="2" rowspan="2">
@@ -371,8 +380,9 @@
                             Go To Jail
                         </td>
                         <td rowspan="3" style="vertical-align:top">                            
-                            <div id="bankContainer" class"BankContainer">
+                            <div id="bankContainer" class="BankContainer">
                                 BANK INFO
+                                <uc:Info ID=bankInfo runat="server"></uc:Info>
                             </div>
                         </td>
                     </tr>

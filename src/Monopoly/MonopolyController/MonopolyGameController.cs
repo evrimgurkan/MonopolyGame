@@ -78,7 +78,10 @@ namespace MonopolyController
         {
             return gameController.IsInJail();
         }
-    }
 
-    
+        public void buyCurrentProperty()
+        {
+            gameController.buyCurrentProperty();
+        }
+    }  
 }

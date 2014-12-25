@@ -35,5 +35,29 @@ namespace IMonopoly
                 o.SendMessageToView(message,money);
             }
         }
+
+        public void AddLog(string message)
+        {
+            foreach (Observer o in observers)
+            {
+                o.AddLog(message);
+            }
+        }
+
+        public void OpenItemsPage(int color, int title, int rent,
+                                    int oneHouseRent, int twoHouseRent,
+                                    int threeHouseRent, int fourHouseRent,
+                                    int hotelRent, int mortgagedValue,
+                                    int housePrice, int hotelPrice)
+        {
+            foreach (Observer o in observers)
+            {
+                o.OpenItemsPage(color, title, rent,
+                                    oneHouseRent, twoHouseRent,
+                                    threeHouseRent, fourHouseRent,
+                                    hotelRent, mortgagedValue,
+                                    housePrice, hotelPrice);
+            }
+        }
     }
 }

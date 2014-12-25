@@ -15,3 +15,5 @@ C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\Model
 C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\obj\Debug\Model.pdb
 F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\IMonopoly.dll
 F:\projects\MonopolyGame\src\Monopoly\Model\bin\Debug\IMonopoly.pdb
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\IMonopoly.dll
+C:\Users\evrimg\Documents\GitHub\MonopolyGame\src\Monopoly\Model\bin\Debug\IMonopoly.pdb

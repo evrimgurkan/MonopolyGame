@@ -50,7 +50,7 @@ namespace Model
             GameController controller = GameController.GameControllerInstance;
 
             ////
-            controller.SendMessageToView("benden sana gelsin be güzelim biz ayakta da gireiz RAILROAD", 1000);
+            //controller.SendMessageToView("benden sana gelsin be güzelim biz ayakta da gireiz RAILROAD", 1000);
             ////
 
             if (this.hasOwner)
@@ -62,6 +62,10 @@ namespace Model
                 {
                     controller.getBank().takeMoneyFromPlayer(rentPrice, controller.getCurrentPlayer());
                     controller.getBank().payMoneyToPlayer(rentPrice, this.owner);
+
+                    // update ui with
+                    // controller.getCurrentPlayer().cash 
+                    // controller.getBank().cash
                 }
                 else
                 {
@@ -72,7 +76,15 @@ namespace Model
             {
                 // Buy property or cancel
                 // TODO: UPDATE UI
+                // Update UI with showing Buy operation
                 // TODO: Check user cash
+
+
+
+
+
+
+
                 if (controller.getCurrentPlayer().cash > this.purchasePrice)
                 {
                     // TODO: Order should be used by VIEW 
