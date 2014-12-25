@@ -6,10 +6,10 @@ using Model.CommandOperations.OrderType;
 
 namespace Model.CommandOperations.Orders
 {
-    class AdvancetoGoOrder : CollectFromBankOrder
+    class CollectMoneyOrder : CollectFromBankOrder
     {
-        public AdvancetoGoOrder(CommandReceiver _affected, CommandReceiver _affecting)
-            : base(_affected, _affecting, 200)
+        public CollectMoneyOrder(CommandReceiver _affected, CommandReceiver _affecting,int amount)
+            : base(_affected, _affecting, amount)
         {
         }
 

@@ -365,15 +365,14 @@ namespace Model
         private List<Card> listChanceCard;
         private List<Card> listCChest;
         private Command command;
-        private State state;
+        //private State state;
         private int currPlayerIndex = 0; // Should be removed
         #endregion
 
         private static GameController instance;
 
-        private GameController(State _state)
+        private GameController()
         {
-            state = _state;
         }
 
         public static GameController GameControllerInstance
@@ -382,7 +381,7 @@ namespace Model
             {
                 if (instance == null)
                 {
-                    instance = new GameController(new PlayableState());
+                    instance = new GameController();
                 }
                 return instance;
             }
@@ -817,7 +816,7 @@ namespace Model
             card = new ChanceCard(chance16_cardLabel, Card.OrderType.WonCompetition);
             listChanceCard.Add(card);
         }
-
+        /*
         public void setState(State _state)
         {
             state = _state;
@@ -827,10 +826,10 @@ namespace Model
         {
             return state;
         }
-
-        public bool IsInJail()
+        */
+        public bool IsInJail(int index)
         {
-            return state.IsInJail();
+            return listPlayer[index].inJail;
         }
 
         private Card getRandomCard(List<Card> cardlist)
@@ -869,6 +868,12 @@ namespace Model
             return it.CurrentIndex();
         }
 
+        public int getCurrentSpaceIndex(Player player)
+        {
+            Iterator it = player.GetIterator();
+            return it.CurrentIndex();
+        }
+
         public void moveBackPlayer(Player player, int spaceIndex)
         {
             Iterator it = player.GetIterator();
@@ -883,10 +888,6 @@ namespace Model
         {
             Iterator it = listPlayer[currPlayerIndex].GetIterator();
             return it.CurrentItem();
-        }
-
-        public void showMessage()
-        {
         }
 
         public void startGame()
@@ -928,11 +929,6 @@ namespace Model
             return listPlayer[index].cash;
         }
 
-        public bool isPlayerJail(int index)
-        {
-            return listPlayer[index].inJail;
-        }
-
         public Symbol getPlayerSymbol(int index)
         {
             return listPlayer[index].symbol;
@@ -941,6 +937,11 @@ namespace Model
         public int getPlayersCount()
         {
             return listPlayer.Count();
+        }
+
+        public Player getPlayer(int playerIndex)
+        {
+            return listPlayer[playerIndex];
         }
 
         public int getPassingGoAmount()
@@ -954,8 +955,16 @@ namespace Model
             Order order = new BuyPropertyOrder(getCurrentPlayer(),
                                                 getBank(), pSpace.pCell);
 
-            Command _command = new CardCommand(order);
+            Command _command = new ActionCommand(order);
             SetCommand(_command);
+            ExecuteCommand();
+        }
+
+        public void getPlayerOutFromJailWithMoney()
+        {
+            Order order = new GetOutJailWithMoneyOrder(getCurrentPlayer(), getBank());
+            Command comm = new ActionCommand(order);
+            SetCommand(comm);
             ExecuteCommand();
         }
     }

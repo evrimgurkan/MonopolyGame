@@ -55,6 +55,13 @@
   <ItemGroup>
     <Content Include="CreatePlayer.aspx" />
     <Content Include="css\cube.css" />
+    <Content Include="icons\dad.png" />
+    <Content Include="icons\girl.png" />
+    <Content Include="icons\Indian.png" />
+    <Content Include="icons\pirate.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\monop.gif" />
+    <Content Include="images\_bg.png" />
     <Content Include="Monopoly.aspx" />
     <Content Include="items.aspx" />
     <Content Include="js\rotate-box.js" />

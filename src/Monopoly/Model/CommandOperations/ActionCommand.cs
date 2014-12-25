@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Model.CommandOperations
 {
-    class CardCommand : Command
+    class ActionCommand : Command
     {
-        public CardCommand(Order cardOrder)
+        public ActionCommand(Order cardOrder)
             : base(cardOrder) 
         {
         }

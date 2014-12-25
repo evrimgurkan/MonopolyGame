@@ -41,53 +41,78 @@ namespace Model
             switch (type)
             {
                 case OrderType.AdvancetoGo:
-                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank());
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),200);
                     break;
                 case OrderType.BankErrorInYourFavor:
+                    order = new BankErrorInFavorOrder(controller.getCurrentPlayer(),
+                                                controller.getBank());
                     break;
                 case OrderType.DoctorFees:
+                    order = new PayMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),50);
                     break;
                 case OrderType.GetOutofJail:
                     break;
                 case OrderType.GotoJail:
+                    order = new GoToJailCardOrder(controller.getCurrentPlayer());
                     break;
                 case OrderType.Birthday_CollectFromEachPlayer:
+                    order = new CollectFromEachPlayerOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),10);
                     break;
                 case OrderType.GrandOperaNight:
+                    order = new CollectFromEachPlayerOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 50);
                     break;
                 case OrderType.IncomeTaxRefund:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 20);
                     break;
                 case OrderType.LifeInsuranceMatures:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 100);
                     break;
                 case OrderType.PayHospitalFees:
+                    order = new PayMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 100);
                     break;
                 case OrderType.PaySchoolFees:
+                    order = new PayMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 50);
                     break;
                 case OrderType.ReceiveConsultancyFee:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 25);
                     break;
                 case OrderType.StreetRepairs:
                     break;
                 case OrderType.WonSecondPrize:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 10);
                     break;
                 case OrderType.Inherit:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 100);
                     break;
                 case OrderType.FromSaleofStock:
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(), 50);
                     break;
                 default:
-                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank());
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),50);
                     break;
             }
-            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank()); 
+            return new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),50); 
         }
 
         public override void applyAction()
         {
             GameController controller = GameController.GameControllerInstance;
             Order _order = getOrder(_order_type);
-            Command _command = new CardCommand(_order);
+            Command _command = new ActionCommand(_order);
             controller.SetCommand(_command);
             controller.ExecuteCommand();
         }

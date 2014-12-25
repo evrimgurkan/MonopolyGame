@@ -44,11 +44,6 @@ namespace MonopolyController
             return gameController.getPlayerCash(index);
         }
 
-        public bool isPlayerJail(int index)
-        {
-            return gameController.isPlayerJail(index);
-        }
-
         public Symbol getPlayerSymbol(int index)
         {
             return gameController.getPlayerSymbol(index);
@@ -74,9 +69,14 @@ namespace MonopolyController
             gameController.Attach(observer);
         }
 
-        public bool IsInJail()
+        public bool IsInJail(int currentPlayerIndex)
         {
-            return gameController.IsInJail();
+            return gameController.IsInJail(currentPlayerIndex);
+        }
+
+        public void GetOutPlayerFromJail()
+        {
+            gameController.getCurrentPlayer().inJail = false;
         }
     }
 

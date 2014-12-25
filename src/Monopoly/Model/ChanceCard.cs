@@ -39,7 +39,7 @@ namespace Model
         {
             GameController controller = GameController.GameControllerInstance;
             Order _order = getOrder(_order_type);
-            Command _command = new CardCommand(_order);
+            Command _command = new ActionCommand(_order);
             controller.SetCommand(_command);
             controller.ExecuteCommand();
         }
@@ -51,8 +51,8 @@ namespace Model
             switch (type)
             {
                 case OrderType.AdvancetoGo:
-                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank());
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),200);
                     break;
                 case OrderType.AdvancetoIllinoisAve:
                     break;
@@ -69,6 +69,7 @@ namespace Model
                 case OrderType.GoBack_3_Space:
                     break;
                 case OrderType.GotoJail:
+                    order = new GoToJailCardOrder(controller.getCurrentPlayer());
                     break;
                 case OrderType.RepairsAllProperty:
                     break;
@@ -85,12 +86,12 @@ namespace Model
                 case OrderType.WonCompetition:
                     break;
                 default:
-                    order = new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank());
+                    order = new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),50);
                     break;
             }
-            return new AdvancetoGoOrder(controller.getCurrentPlayer(),
-                                                controller.getBank()); ;
+            return new CollectMoneyOrder(controller.getCurrentPlayer(),
+                                                controller.getBank(),50); ;
         }
     }
 }

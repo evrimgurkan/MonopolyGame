@@ -6,7 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MonopolyController;
 using IMonopoly;
-
+using System.Web.Services;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls.WebParts;
 namespace Monopoly
 {
     public partial class _Default : System.Web.UI.Page , Observer
@@ -47,15 +49,33 @@ namespace Monopoly
             diceController.RollDice();
             int dieOne = diceController.getDieOneValue();
             int dieTwo = diceController.getDieTwoValue();
-            lbLogs.Items.Add("Dice1 : " + dieOne +
-                             ", Dice2 : " + dieTwo);
-            lbLogs.Items.Add("Player " + mGameController.getPlayerName(currentPlayerIndex) +
-                 " is moved " + (dieOne + dieTwo) + " space");
 
-            int lastState = getCurrentIndex(currentPlayerIndex, dieOne + dieTwo);
-            lbLogs.Items.Add("Player " + mGameController.getPlayerName(currentPlayerIndex) +
-                             "s current space is " + lastState);
-            movePlayer(currentPlayerIndex, lastState);
+            if (diceController.isDiceDouble())
+            {
+                mGameController.GetOutPlayerFromJail();
+            }
+            if (!mGameController.IsInJail(currentPlayerIndex))
+            {
+                cube.Attributes.CssStyle.Clear();
+                cube.Attributes.Add("class", GetDiceCSS(dieOne));
+                cube2.Attributes.CssStyle.Clear();
+                cube2.Attributes.Add("class", GetDiceCSS(dieTwo));
+
+                dad.Attributes.CssStyle.Add("margin-top", "-400px");
+                dad.Attributes.CssStyle.Add("transition", "margin 5s");
+                //ScriptManager.RegisterStartupScript(this, GetType(), "setDiceOneValue", "setDiceOneValue(show-back);", true);
+                //ScriptManager.RegisterStartupScript(this, GetType(), "setDiceTwoValue", "setDiceTwoValue(show-left);", true);
+
+                lbLogs.Items.Add("Dice1 : " + dieOne +
+                                 ", Dice2 : " + dieTwo);
+                lbLogs.Items.Add("Player " + mGameController.getPlayerName(currentPlayerIndex) +
+                     " is moved " + (dieOne + dieTwo) + " space");
+
+                int lastState = getCurrentIndex(currentPlayerIndex, dieOne + dieTwo);
+                lbLogs.Items.Add("Player " + mGameController.getPlayerName(currentPlayerIndex) +
+                                 "s current space is " + lastState);
+                movePlayer(currentPlayerIndex, lastState);
+            }
             if (diceController.isDiceDouble())
             {
                 btnRollDice.Visible = true;
@@ -63,6 +83,26 @@ namespace Monopoly
             else
             {
                 btnFinishTurn.Visible = true;
+            }
+        }
+        private string GetDiceCSS(int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    return "show-front";
+                case 2:
+                    return "show-back";
+                case 3:
+                    return "show-right";
+                case 4:
+                    return "show-left";
+                case 5:
+                    return "show-top";
+                case 6:
+                    return "show-bottom";
+                default:
+                    return "show-front";
             }
         }
 
@@ -91,7 +131,7 @@ namespace Monopoly
 
             // TODO: UI should be update for in jail state player. 
             // A pop up should be displayed and choice between roll dice or pay money
-            bool inJail = mGameController.IsInJail();
+            bool inJail = mGameController.IsInJail(currentPlayerIndex);
             lbLogs.Items.Add(mGameController.getPlayerName(currentPlayerIndex) + " is in Jail ???  " + inJail.ToString());
         }
 
