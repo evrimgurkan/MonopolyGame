@@ -12,6 +12,7 @@ namespace Model
         private CardType _type;
         private string _label;
         private OrderType _order_type;
+
         public CommunityChestCard(string label, OrderType orderType)
         {
             _type = CardType.TYPE_CCHEST;

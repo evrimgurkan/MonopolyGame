@@ -1,27 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="items.aspx.cs" Inherits="Monopoly.items" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BuyCard.ascx.cs" Inherits="Monopoly.UserControls.BuyCard" %>
+<%@ Register Src="~/UserControls/BuyButtons.ascx" TagName="BuyButton" TagPrefix="uc" %>
 
-<%@ Register src="UserControls/BuyButtons.ascx" tagname="BuyButton" tagprefix="uc" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-
+        <style type="text/css">
             .style1
             {
                 height: 46px;
             }
         </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
 
         <table class="toccolours" style="border: 1px solid black; font-variant: small-caps;
             float: right; clear: right; margin: 0 0 0.5em 1em; width: 20em; height:80px; ">
+            <tbody>
                 <tr>
-                    <th 
+                    <th colspan="2" 
                         style="text-align: center; font-size: 17px;" 
                         class="style1">
                         <font color="white">
@@ -34,7 +25,7 @@
                     </th>
                 </tr>
                 <tr>
-                    <td style="text-align: center;">
+                    <td colspan="2" style="text-align: center;">
                         Rent $<asp:Label ID="lblRent" runat="server" Text="Label"></asp:Label>
                         .
                     </td>
@@ -43,24 +34,36 @@
                     <td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With 1 House
                     </td>
+                    <td>
+                        &nbsp;$<asp:Label ID="lblOneHouseRent" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With 2 Houses
+                    </td>
+                    <td>
+                        &nbsp;$<asp:Label ID="lblTwoHousesRent" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With 3 Houses
                     </td>
+                    <td>
+                        &nbsp;$<asp:Label ID="lblThreeHousesRent" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With 4 Houses
                     </td>
+                    <td>
+                        &nbsp;$<asp:Label ID="lblFourHousesRent" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="text-align: center;">
+                    <td colspan="2" style="text-align: center;">
                         With HOTEL $<asp:Label ID="lblHotelRent" runat="server" Text="Label"></asp:Label>
                         <br>
                         <br>
@@ -82,8 +85,6 @@
                         </span>
                     </td>
                 </tr>
+            </tbody>
         </table>
-    </div>
-    </form>
-</body>
-</html>
+    

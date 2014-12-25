@@ -8,7 +8,12 @@ namespace Model
 {
     public class Bank : CommandReceiver
     {
+
         private int bankCash;
+        public int cash
+        {
+            get { return this.bankCash; }
+        }
 
         public Bank()
         {
@@ -36,6 +41,7 @@ namespace Model
                 player.cash -= amount;
                 is_success = true;
             }
+            
             return is_success; // TODO: if success is false, player should be bankrupted
         }
     }

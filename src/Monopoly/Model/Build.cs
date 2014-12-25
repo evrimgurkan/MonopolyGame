@@ -24,6 +24,7 @@ namespace Model
             if (pCell.owner.playerID == player.playerID)
             {
                 GameController controller = GameController.GameControllerInstance;
+                // Build hotel
                 if (currentCellHouseCount == 4)
                 {
                     PropertyCell nextCell = null;
@@ -48,13 +49,19 @@ namespace Model
                             pCell.houseCount = 0;
                             pCell.hasHotel = true;
                             // TODO: UI should be updated
+                            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                                " paid $" + pCellGroup.costPerHotel + " to bank for hotel");
+                            controller.updateBankInfo(controller.getBank().cash, pCell.name, true);
                         }
                         else
                         {
+                            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                                " has not enogh money to buy hotel !");
                             // TODO: UI should be updated
                         }
                     }
                 }
+                // build house
                 else if ((currentCellHouseCount < 4) &&
                         !pCell.hasHotel)
                 {
@@ -80,10 +87,17 @@ namespace Model
                             controller.getBank().takeMoneyFromPlayer(pCellGroup.costPerHouse, controller.getCurrentPlayer());
                             pCell.houseCount++;
                             // TODO: UI should be updated
+                            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                                " paid $" + pCellGroup.costPerHouse + " to bank for house");
+
+                            controller.updateBankInfo(controller.getBank().cash, pCell.name, true);
+
                         }
                         else
                         {
                             // TODO: UI should be updated
+                            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                                " has not enogh money to buy house !");
                         }
                     }
                 }
@@ -92,6 +106,9 @@ namespace Model
             else
             {
                 // TODO: Notify error in else statement
+                GameController controller = GameController.GameControllerInstance;
+                controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                    " has not this property");
             }
         }
     }

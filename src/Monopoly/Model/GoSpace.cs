@@ -22,6 +22,9 @@ namespace Model
         {
             GameController controller = GameController.GameControllerInstance;
             controller.getBank().payMoneyToPlayer(controller.getPassingGoAmount(), controller.getCurrentPlayer());
+            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                " passed from Go Space and took $" + controller.getPassingGoAmount());
+            controller.updateBankInfo(controller.getBank().cash, "", false);
         }
     }
 }

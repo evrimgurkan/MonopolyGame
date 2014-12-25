@@ -26,6 +26,10 @@ namespace Model
                     controller.getBank().payMoneyToPlayer((pCellGroup.costPerHotel / 2), controller.getCurrentPlayer());
                     pCell.houseCount = 4;
                     pCell.hasHotel = false;
+
+                    controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                        " sold hotel " + pCell.name);
+                    controller.updateBankInfo(controller.getBank().cash, pCell.name, false);
                     // TODO: UI should be updated
                 }
                 else if ((currentCellHouseCount <= 4) && (currentCellHouseCount > 0))
@@ -47,6 +51,10 @@ namespace Model
                         PropertyCellGroup pCellGroup = (PropertyCellGroup)pCell.cellGroup;
                         controller.getBank().payMoneyToPlayer((pCellGroup.costPerHouse / 2), controller.getCurrentPlayer());
                         pCell.houseCount--;
+                        controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                             " sold house " + pCell.name);
+                        controller.updateBankInfo(controller.getBank().cash, pCell.name, false);
+
                         // TODO: UI should be updated
                     }
                 }
@@ -54,6 +62,9 @@ namespace Model
             else
             {
                 // TODO: Notify error in else statement
+                GameController controller = GameController.GameControllerInstance;
+                controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                    " has not this property");
             }
         }
     }

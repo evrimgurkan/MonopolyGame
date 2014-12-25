@@ -78,7 +78,10 @@ namespace MonopolyController
         {
             gameController.getCurrentPlayer().inJail = false;
         }
-    }
 
-    
+        public void buyCurrentProperty()
+        {
+            gameController.buyCurrentProperty();
+        }
+    }  
 }
