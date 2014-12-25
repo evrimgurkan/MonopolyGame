@@ -48,8 +48,7 @@ namespace Model
             get { return rentAmount; }
             set { rentAmount = value; }
         }
-
-
+        
         private int _houseCount;
         public int houseCount
         {
@@ -134,10 +133,6 @@ namespace Model
         {
             GameController controller = GameController.GameControllerInstance;
 
-            ////
-            controller.SendMessageToView("benden sana gelsin be güzelim biz ayakta da gireiz PROPERTY", 1000);
-            ////
-
             if (this.hasOwner)
             {
                 // Pay rent
@@ -146,10 +141,17 @@ namespace Model
                 {
                     controller.getBank().takeMoneyFromPlayer(rentPrice, controller.getCurrentPlayer());
                     controller.getBank().payMoneyToPlayer(rentPrice, this.owner);
+
+                    controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                        " paid $" + rentPrice + " to " + this.owner.name);
+                   
+                    controller.updateBankInfo(controller.getBank().cash, "", false);
                 }
                 else
                 {
                     //TODO: Update ui, Sell property to pay rent price
+                    controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                        " should be sell some property for paying this rent!!");
                 }
             }
             else
@@ -161,13 +163,21 @@ namespace Model
                 {
                     // TODO: Order should be used by VIEW 
 
+                    controller.buyCurrentProperty();
+                    controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                        " buy " + this.name + " with $" + this.purchasePrice);
+
+                    controller.updateBankInfo(controller.getBank().cash, this.name, true);
+
                     //controller.getBank().takeMoneyFromPlayer(this.purchasePrice, controller.getCurrentPlayer());
                     //this.owner = controller.getCurrentPlayer(); // Is there anything else ? 
                     //controller.getCurrentPlayer().AddAssest(this);
                 }
                 else
                 {
-                    //TODO: Update ui, Sell property to pay rent price
+                    //TODO: Update ui, user could not buy
+                    controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                        " has not enough money to buy this property!");
                 }
             }
         }

@@ -41,6 +41,7 @@ namespace Model
                 player.cash -= amount;
                 is_success = true;
             }
+            
             return is_success; // TODO: if success is false, player should be bankrupted
         }
     }

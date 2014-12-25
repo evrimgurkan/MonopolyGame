@@ -47,6 +47,11 @@ namespace Model
             // TODO: Popup a window and select Payment type (%10 or 200$)
             // TODO: Should be checked player cash in bank
             controller.getBank().takeMoneyFromPlayer(getTaxPrice(), controller.getCurrentPlayer());
+
+            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                " paid $" + getTaxPrice());
+
+            controller.updateBankInfo(controller.getBank().cash, "", false);
         }
     }
 }

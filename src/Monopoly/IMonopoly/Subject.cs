@@ -59,5 +59,13 @@ namespace IMonopoly
                                     housePrice, hotelPrice);
             }
         }
+
+        public void updateBankInfo(int cash, string property, bool shouldBeDeleted)
+        {
+            foreach (Observer o in observers)
+            {
+                o.updateBankInfo(cash, property, shouldBeDeleted);
+            }
+        }
     }
 }

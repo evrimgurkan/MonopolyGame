@@ -332,8 +332,7 @@
                         <td rowspan ="13">
                             <div id="playerContainer" class="PlayerContainer">
                                 PLAYERS INFO
-                                <uc2:BuyCard ID=BuyCard runat="server"></uc2:BuyCard>
-                            </div>
+                                </div>
                         </td>
                         <td colspan="2" rowspan="2">
                             <a href="" onclick="window.open('items.aspx', 'ITEMS', 'width=340, height=300'); return false;" 
@@ -502,7 +501,8 @@
                             <div id="logContainer" class="LogContainer">
                                 <label id="logTitle" class="logTitle">HISTORY</label>
                                 <br />
-                                <asp:ListBox ID="lbLogs" class="lbLogs" runat="server" >
+                                <asp:ListBox ID="lbLogs" class="lbLogs" runat="server" Height="465px" 
+                                    Width="294px" >
                                 </asp:ListBox>
                             </div>
                         </td>

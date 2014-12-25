@@ -54,7 +54,6 @@ namespace Model
 
         public void rollDice()
         {
-            // TODO: check two dice values are different or not
             Random diceRandom = new Random();
             diceOneValue = diceRandom.Next(1, 7);
             diceTwoValue = diceRandom.Next(1, 7);

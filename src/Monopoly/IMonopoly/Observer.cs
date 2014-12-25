@@ -18,5 +18,7 @@ namespace IMonopoly
                                     int threeHouseRent, int fourHouseRent,
                                     int hotelRent, int mortgagedValue,
                                     int housePrice, int hotelPrice);
+
+        void updateBankInfo(int cash, string property, bool shouldBeDeleted);
     }
 }

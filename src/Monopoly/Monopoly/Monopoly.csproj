@@ -53,6 +53,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cards.aspx" />
     <Content Include="CreatePlayer.aspx" />
     <Content Include="css\cube.css" />
     <Content Include="UserControls\BuyButtons.ascx" />
@@ -66,6 +67,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards.aspx.cs">
+      <DependentUpon>Cards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cards.aspx.designer.cs">
+      <DependentUpon>Cards.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreatePlayer.aspx.cs">
       <DependentUpon>CreatePlayer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

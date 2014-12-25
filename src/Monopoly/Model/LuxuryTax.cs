@@ -38,6 +38,11 @@ namespace Model
             GameController controller = GameController.GameControllerInstance;
             // TODO: Should be checked player cash in bank
             controller.getBank().takeMoneyFromPlayer(getTaxPrice(), controller.getCurrentPlayer());
+
+            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                " paid $" + getTaxPrice());
+
+            controller.updateBankInfo(controller.getBank().cash, "", false);
         }
     }
 }

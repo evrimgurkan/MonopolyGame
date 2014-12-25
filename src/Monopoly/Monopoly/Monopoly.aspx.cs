@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MonopolyController;
 using IMonopoly;
+using System.Drawing;
 
 namespace Monopoly
 {
@@ -104,11 +105,9 @@ namespace Monopoly
 
         public void SendMessageToView(string message, int money)
         {
-            lbLogs.Items.Add(message + " money : " + money.ToString());
-            bankInfo.Cash = money.ToString();
-            bankInfo.addProperty("Done !");
-
-
+            //lbLogs.Items.Add(message + " money : " + money.ToString());
+            //bankInfo.Cash = money.ToString();
+            //bankInfo.addProperty("Done !");
 
         }
 
@@ -117,17 +116,33 @@ namespace Monopoly
             lbLogs.Items.Add(message);
         }
 
-        public void OpenItemsPage(Color color, int title, int rent,
+        public void updateBankInfo(int cash, string property, bool shouldBeDeleted)
+        {
+            bankInfo.Cash = cash.ToString();
+            if (property != "")
+            {
+                if (shouldBeDeleted)
+                {
+                    bankInfo.removeProperty(property);
+                }
+                else
+                {
+                    bankInfo.addProperty(property);
+                }
+            }
+        }
+
+        public void OpenItemsPage(int color, int title, int rent,
                                     int oneHouseRent, int twoHouseRent,
                                     int threeHouseRent, int fourHouseRent,
                                     int hotelRent, int mortgagedValue,
                                     int housePrice, int hotelPrice)
         {
-            items item = new items(color,  title,  rent, 
-                                     oneHouseRent,  twoHouseRent,
-                                     threeHouseRent,  fourHouseRent,
-                                     hotelRent,  mortgagedValue,
-                                     housePrice,  hotelPrice);
+            //items item = new items(color,  title,  rent, 
+            //                         oneHouseRent,  twoHouseRent,
+            //                         threeHouseRent,  fourHouseRent,
+            //                         hotelRent,  mortgagedValue,
+            //                         housePrice,  hotelPrice);
 
             
 

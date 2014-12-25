@@ -21,6 +21,9 @@ namespace Model
         public override void playAction()
         {
             // Do nothing
+            GameController controller = GameController.GameControllerInstance;
+            controller.AddLog("Player " + controller.getCurrentPlayer().name +
+                                " is now Free Parking Space");
         }
     }
 }

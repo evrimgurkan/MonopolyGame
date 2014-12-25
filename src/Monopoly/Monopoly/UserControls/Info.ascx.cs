@@ -32,7 +32,13 @@ namespace Monopoly
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                //Load all items in the list box.
+                int nItem = Convert.ToInt32(lbProps.Items.Count * 17);
+                lbProps.Height = nItem; //Set height depends on the font size.
+                lbProps.Width = 800; //This will ensure the list item won't be shrinked!
+            }
         }
     }
 }
