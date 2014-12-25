@@ -49,11 +49,12 @@ namespace Model
         #endregion
 
         #region Constructor
-        public Player(string _name, int _cash, Symbol _symbol)
+        public Player(string _name, int _cash, Symbol _symbol,int id )
         {
             playerName = _name;
-            cashAmount = 1000;
+            cashAmount = _cash;
             playerSymbol = _symbol;
+            player_id = id;
             Assets = new List<Cell>();
         }
 

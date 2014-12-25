@@ -23,9 +23,9 @@ namespace MonopolyController
             gameController.fillBoard();
         }
 
-        public void addPlayer(string name)
+        public void addPlayer(string name, int playerID)
         {
-            gameController.addPlayer(name);
+            gameController.addPlayer(name, playerID);
         }
 
         public string getPlayerName(int index)

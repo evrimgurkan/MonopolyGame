@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Monopoly.aspx.cs" Inherits="Monopoly._Default" %>
+<%@ Register Src="~/UserControls/Info.ascx" TagName="BankInfo" TagPrefix="uc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -450,6 +451,7 @@
                         <div id="bankContainerID" class="BankContainer">
                             BANK INFO
                         </div>
+                        <uc:BankInfo ID="bankInfo" runat="server" />
                     </td>
                 </tr>
                 <tr style="text-align: center; height: 25px;">

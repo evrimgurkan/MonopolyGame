@@ -30,7 +30,7 @@ namespace Model.IteratorOperations
             {
                 _current = -1;
             }
-            if (_current < _listSpace.Count - 1)
+            if (_current < _listSpace.Count)
             {
                 ret = _listSpace[++_current];
             }
@@ -74,7 +74,7 @@ namespace Model.IteratorOperations
         // Gets whether iterations are complete
         public override bool IsDone()
         {
-            return _current >= _listSpace.Count;
+            return _current >= _listSpace.Count -1;
         }
     }
 }

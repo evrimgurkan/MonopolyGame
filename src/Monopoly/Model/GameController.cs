@@ -437,6 +437,10 @@ namespace Model
             //listPlayer.Add(player2);
             #endregion
 
+            #region ADD GO SPACE
+            listSpace.Add(new GoSpace(goName));
+            #endregion
+
             #region ADD BROWN1 SPACE
 
             PropertyCell brown1_cell = new PropertyCell(pBrownCellGroup, brown1_mortgagePrice, brown1_name, brown1_cost,
@@ -722,10 +726,6 @@ namespace Model
             listSpace.Add(new PropertySpace(purple2_cell));
             #endregion
 
-            #region ADD GO SPACE
-            listSpace.Add(new GoSpace(goName));
-            #endregion
-
             #endregion
 
         }
@@ -735,11 +735,11 @@ namespace Model
             board.fillBoard(listPlayer, listSpace);
         }
 
-        public void addPlayer(string name)
+        public void addPlayer(string name, int playerID)
         {
             Symbol symbol = new Symbol(Symbol.SymbolType.CAR);
             listSymbol.Add(symbol);
-            Player player = new Player(name, 0, listSymbol[0]);
+            Player player = new Player(name, 2000, listSymbol[0], playerID);
             listPlayer.Add(player);
         }
 
@@ -864,8 +864,20 @@ namespace Model
             for (int i = 0; i < count; i++)
             {
                 it.Next();
+                if (it.IsDone())
+                {
+                    CollectPassGoAmount();
+                }
             }
             return it.CurrentIndex();
+        }
+
+        private void CollectPassGoAmount()
+        {
+            Order ord = new CollectMoneyOrder(getCurrentPlayer(), getBank(), 200);
+            Command cmd = new ActionCommand(ord);
+            SetCommand(cmd);
+            ExecuteCommand();
         }
 
         public int getCurrentSpaceIndex(Player player)
