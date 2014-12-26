@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Monopoly.aspx.cs" Inherits="Monopoly._Default" %>
+
 <%@ Register Src="~/UserControls/Info.ascx" TagName="BankInfo" TagPrefix="uc" %>
 <%@ Register Src="~/UserControls/Info.ascx" TagName="UserInfo" TagPrefix="uc2" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -61,7 +61,7 @@
         }
         img
         {
-            position:absolute;
+            position: absolute;
             z-index: 33;
         }
         img:hover
@@ -69,7 +69,6 @@
             margin-top: -400px;
             transition: margin 5s;
         }
-        
         .LogContainer
         {
             vertical-align: bottom;
@@ -397,10 +396,6 @@
                         <div id="playerContainer" class="PlayerContainer">
                             PLAYERS INFO
                         </div>
-                        <uc2:UserInfo ID="UserInfo1" runat="server" Visible=false />
-                        <uc2:UserInfo ID="UserInfo2" runat="server" Visible=false />
-                        <uc2:UserInfo ID="UserInfo3" runat="server" Visible=false />
-                        <uc2:UserInfo ID="UserInfo4" runat="server" Visible=false />
                     </td>
                     <td colspan="2" rowspan="2" style="width: 100px;">
                         <a href="" onclick="window.open('items.aspx', 'ITEMS', 'width=340, height=300'); return false;"
@@ -456,7 +451,7 @@
                         <div id="bankContainerID" class="BankContainer">
                             BANK INFO
                         </div>
-                        <uc:BankInfo ID="bankInfo" runat="server" />
+                        <uc:BankInfo ID="bankInfo" runat="server" width="300px" />
                     </td>
                 </tr>
                 <tr style="text-align: center; height: 25px;">
@@ -485,7 +480,7 @@
                     <td bgcolor="#ff8000" style="width: 20px;">
                     </td>
                     <th colspan="9" rowspan="8" style="text-align: center; vertical-align: middle; font-size: 50px;">
-                        <img src="images/monop.gif" style="vertical-align:top;" />
+                        <img src="images/monop.gif" style="vertical-align: top;" />
                         <br />
                         <section class="container">
                             <div id="cube" class="show-front" runat="server">
@@ -705,7 +700,7 @@
                     <td bgcolor="#6F4E37">
                     </td>
                     <td colspan="2" rowspan="2">
-                        <img id="dad" src="icons/Indian.png" runat="server"/>
+                        <img id="dad" src="icons/Indian.png" runat="server" />
                         GO
                         <br>
                         Collect $200 salary<br>

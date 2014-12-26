@@ -23,42 +23,6 @@ namespace Monopoly {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// UserInfo1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Monopoly.Info UserInfo1;
-        
-        /// <summary>
-        /// UserInfo2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Monopoly.Info UserInfo2;
-        
-        /// <summary>
-        /// UserInfo3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Monopoly.Info UserInfo3;
-        
-        /// <summary>
-        /// UserInfo4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Monopoly.Info UserInfo4;
-        
-        /// <summary>
         /// bankInfo control.
         /// </summary>
         /// <remarks>

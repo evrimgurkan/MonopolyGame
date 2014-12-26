@@ -38,35 +38,42 @@ namespace Monopoly
                 }
             }
 
-            if (playersCount == 1)
-            {
-                UserInfo1.Visible = true;
-                UserInfo1.changeName(mGameController.getPlayerName(0));
-                UserInfo1.Cash = mGameController.getPlayerCash(0).ToString();
-            }
-            if (playersCount == 2)
-            {
-                UserInfo1.Visible = true;
-                UserInfo2.Visible = true;
-            }
-            if (playersCount == 3)
-            {
-                UserInfo1.Visible = true;
-                UserInfo2.Visible = true;
-                UserInfo3.Visible = true;
-            }
-            if (playersCount == 4)
-            {
-                UserInfo1.Visible = true;
-                UserInfo2.Visible = true;
-                UserInfo3.Visible = true;
-                UserInfo4.Visible = true;
-            }
+            
+
+        //    if (playersCount == 1)
+        //    {
+        //        UserInfo1.Visible = true;
+        //        UserInfo1.changeName(mGameController.getPlayerName(0));
+        //        UserInfo1.Cash = mGameController.getPlayerCash(0).ToString();
+        //    }
+        //    if (playersCount == 2)
+        //    {
+        //        UserInfo1.Visible = true;
+        //        UserInfo2.Visible = true;
+        //    }
+        //    if (playersCount == 3)
+        //    {
+        //        UserInfo1.Visible = true;
+        //        UserInfo2.Visible = true;
+        //        UserInfo3.Visible = true;
+        //    }
+        //    if (playersCount == 4)
+        //    {
+        //        UserInfo1.Visible = true;
+        //        UserInfo2.Visible = true;
+        //        UserInfo3.Visible = true;
+        //        UserInfo4.Visible = true;
+        //    }
         }
 
         public _Default getInstance()
         {
             return this;
+        }
+
+        public void rollDice()
+        {
+ 
         }
 
         protected void btnRollDice_Click(object sender, EventArgs e)
@@ -116,7 +123,7 @@ namespace Monopoly
         private void CalculateIconPosition(int position)
         {
             int l = 0, r = 0, t= 0, b = 0;
-            for (int i = 0; i < position + 1; i++)
+            for (int i = 0; i < position; i++)
             {
 
                 if (i < 11)

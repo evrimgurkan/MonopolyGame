@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Model.Bank" Collapsed="true">
+    <Position X="21.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAECEAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Board" Collapsed="true">
+    <Position X="24.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACwCAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Build" Collapsed="true">
+    <Position X="36.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Build.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Card" Collapsed="true">
+    <Position X="29.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAQACEAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CardSpace" Collapsed="true">
+    <Position X="29.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Cell" Collapsed="true">
+    <Position X="48" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAIAEAAGAAAgEAAAAAABAAAAAAmAAAAgAQAAAAQAAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CellGroup" Collapsed="true">
+    <Position X="50.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>CellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ChanceCard" Collapsed="true">
+    <Position X="30.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAQAABAAAAAAAQACEAAAAAAAAAAAAAE=</HashCode>
+      <FileName>ChanceCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommunityChestCard" Collapsed="true">
+    <Position X="28.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAQAABAAAAAAAQACEAAAAAAAAAAAAAE=</HashCode>
+      <FileName>CommunityChestCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Dice" Collapsed="true">
+    <Position X="34" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAIAAAAAAAAADAAAAAAAAAAIAAAAEAAAACAA=</HashCode>
+      <FileName>Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.FreeParkingSpace" Collapsed="true">
+    <Position X="25.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>FreeParkingSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.GameController" Collapsed="true">
+    <Position X="39.75" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>7cMOXc3D4OP+291cP+EM3daB5uT9H7OiZrcIK/9f/9c=</HashCode>
+      <FileName>GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.GoSpace" Collapsed="true">
+    <Position X="33.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GoSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.GoToJailSpace" Collapsed="true">
+    <Position X="37.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>GoToJailSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IncomeTax" Collapsed="true">
+    <Position X="41.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAIAAAAAEAABAAAAAQAACAA=</HashCode>
+      <FileName>IncomeTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.JailSpace" Collapsed="true">
+    <Position X="42.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>JailSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.LuxuryTax" Collapsed="true">
+    <Position X="38.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAABAAAAIAAAAAEAAAAAAAAQAACAA=</HashCode>
+      <FileName>LuxuryTax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.NonPropertyCellGroup" Collapsed="true">
+    <Position X="54.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NonPropertyCellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.NonPurchasableSpace" Collapsed="true">
+    <Position X="36.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NonPurchasableSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Player" Collapsed="true">
+    <Position X="27.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAIACCgAAAEABACAAEAAAAAAAAkAAAAAAIgAAAEAAI=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.PropertyCell" Collapsed="true">
+    <Position X="48" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAhAAACACAQAAAAAAAAAgAAAAgQAAAACEAEgQgAQAA=</HashCode>
+      <FileName>PropertyCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.PropertyCellGroup" Collapsed="true">
+    <Position X="54.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAAAAAAAAAAABAAAAIAIAACAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertyCellGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.PropertySpace" Collapsed="true">
+    <Position X="48" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertySpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.PurchasableSpace" Collapsed="true">
+    <Position X="48" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PurchasableSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.RailroadCell" Collapsed="true">
+    <Position X="45.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RailroadCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Sell" Collapsed="true">
+    <Position X="46.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Space" Collapsed="true">
+    <Position X="40.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Symbol" Collapsed="true">
+    <Position X="29.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Symbol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Tax" Collapsed="true">
+    <Position X="40" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAACAA=</HashCode>
+      <FileName>Tax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.TaxSpace" Collapsed="true">
+    <Position X="40" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.UtilityCell" Collapsed="true">
+    <Position X="50.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UtilityCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.ActionCommand" Collapsed="true">
+    <Position X="38.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\ActionCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Command" Collapsed="true">
+    <Position X="40.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.CommandReceiver" Collapsed="true">
+    <Position X="24.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\CommandReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Order" Collapsed="true">
+    <Position X="25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAEAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.BankErrorInFavorOrder" Collapsed="true">
+    <Position X="20" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\BankErrorInFavorOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.BuyPropertyOrder" Collapsed="true">
+    <Position X="15.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\BuyPropertyOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.CollectFromEachPlayerOrder" Collapsed="true">
+    <Position X="26.75" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\CollectFromEachPlayerOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.CollectMoneyOrder" Collapsed="true">
+    <Position X="22.25" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\CollectMoneyOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.GetOutJailWithMoneyOrder" Collapsed="true">
+    <Position X="29" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\GetOutJailWithMoneyOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.GoToJailCardOrder" Collapsed="true">
+    <Position X="33.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\GoToJailCardOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.Orders.PayMoneyOrder" Collapsed="true">
+    <Position X="24.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\Orders\PayMoneyOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.BuyPropertyCellOrder" Collapsed="true">
+    <Position X="15.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAEEAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\BuyPropertyCellOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.CollectFromBankOrder" Collapsed="true">
+    <Position X="21.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAEAAAAAAAAAAAAAgAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\CollectFromBankOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.CollectFromPlayersOrder" Collapsed="true">
+    <Position X="26.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAEAAAAAAAAAAAAAgAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\CollectFromPlayersOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.GetOutPlayerFromJailOrder" Collapsed="true">
+    <Position X="29" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAEAAAAAAAAAAAAAgAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\GetOutPlayerFromJailOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.GoBackOrder" Collapsed="true">
+    <Position X="31.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\GoBackOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.GoToJailOrder" Collapsed="true">
+    <Position X="33.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\GoToJailOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.GoToSpaceOrder" Collapsed="true">
+    <Position X="11" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\GoToSpaceOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.GoToUtilityOrder" Collapsed="true">
+    <Position X="13.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\GoToUtilityOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.PayForAssetsOrder" Collapsed="true">
+    <Position X="17.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\PayForAssetsOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.CommandOperations.OrderType.PayMoneyToBankOrder" Collapsed="true">
+    <Position X="24.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAEAAAAAAAAAAAAAgAABAAAAAAAAAAA=</HashCode>
+      <FileName>CommandOperations\OrderType\PayMoneyToBankOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IteratorOperations.Iterator" Collapsed="true">
+    <Position X="27.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQAAAAAAgAAAAABAAEAAAAAAAABAAAA=</HashCode>
+      <FileName>IteratorOperations\Iterator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IteratorOperations.SpaceIterator" Collapsed="true">
+    <Position X="27.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQABAAAAgAAAAABAAEAAAAAABABAAAA=</HashCode>
+      <FileName>IteratorOperations\SpaceIterator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.IteratorOperations.SpaceList" Collapsed="true">
+    <Position X="44" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>IteratorOperations\SpaceList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

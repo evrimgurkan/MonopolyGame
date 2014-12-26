@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Model.CommandOperations.OrderType
 {
-    class GoBackOrder
+    class GoBackOrder : Order
     {
+        public GoBackOrder() : base(null, null) { }
+        public override bool ApplyOrder()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

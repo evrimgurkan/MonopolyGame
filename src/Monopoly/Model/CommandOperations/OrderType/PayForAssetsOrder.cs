@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Model.CommandOperations.OrderType
 {
-    class PayForAssetsOrder
+    class PayForAssetsOrder : Order
     {
+        public PayForAssetsOrder() : base(null, null) { }
+        public override bool ApplyOrder()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
