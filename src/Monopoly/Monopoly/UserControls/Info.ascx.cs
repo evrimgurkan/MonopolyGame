@@ -15,10 +15,11 @@ namespace Monopoly
             //get { return this.lblCash.Text; } // is necessary?
         }
 
-        //public ListBox PropertiesList
-        //{
-        //    get { return this.lbProps; }
-        //}
+        public void changeName(string name)
+        {
+            lblName.Visible = true;
+            lblName.Text = name;
+        }
 
         public void addProperty(string property)
         {

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Monopoly.aspx.cs" Inherits="Monopoly._Default" %>
 <%@ Register Src="~/UserControls/Info.ascx" TagName="BankInfo" TagPrefix="uc" %>
+<%@ Register Src="~/UserControls/Info.ascx" TagName="UserInfo" TagPrefix="uc2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -396,6 +397,10 @@
                         <div id="playerContainer" class="PlayerContainer">
                             PLAYERS INFO
                         </div>
+                        <uc2:UserInfo ID="UserInfo1" runat="server" Visible=false />
+                        <uc2:UserInfo ID="UserInfo2" runat="server" Visible=false />
+                        <uc2:UserInfo ID="UserInfo3" runat="server" Visible=false />
+                        <uc2:UserInfo ID="UserInfo4" runat="server" Visible=false />
                     </td>
                     <td colspan="2" rowspan="2" style="width: 100px;">
                         <a href="" onclick="window.open('items.aspx', 'ITEMS', 'width=340, height=300'); return false;"

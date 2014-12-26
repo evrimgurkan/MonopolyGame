@@ -37,6 +37,31 @@ namespace Monopoly
                     lbLogs.Items.Add("Current player is : " + mGameController.getPlayerName(currentPlayerIndex));
                 }
             }
+
+            if (playersCount == 1)
+            {
+                UserInfo1.Visible = true;
+                UserInfo1.changeName(mGameController.getPlayerName(0));
+                UserInfo1.Cash = mGameController.getPlayerCash(0).ToString();
+            }
+            if (playersCount == 2)
+            {
+                UserInfo1.Visible = true;
+                UserInfo2.Visible = true;
+            }
+            if (playersCount == 3)
+            {
+                UserInfo1.Visible = true;
+                UserInfo2.Visible = true;
+                UserInfo3.Visible = true;
+            }
+            if (playersCount == 4)
+            {
+                UserInfo1.Visible = true;
+                UserInfo2.Visible = true;
+                UserInfo3.Visible = true;
+                UserInfo4.Visible = true;
+            }
         }
 
         public _Default getInstance()
